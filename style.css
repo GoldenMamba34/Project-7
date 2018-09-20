@@ -7,6 +7,10 @@
     flex-direction: column;
 }
 
+.tinyMargin {
+    margin-top: 20px;
+}
+
 .sideBarLink {
     margin: 20px 10px 10px;
     width: 45px;
@@ -40,7 +44,7 @@ div {
     height: 8vh;
     width: 100vw;
     display: flex;
-    flex-direction: row;
+    align-items: flex-end;
     background-color: #7479BD;
 }
 
@@ -62,15 +66,9 @@ div {
     height: 30px;
 }
 
-.tinyMargin {
-    margin-top: 20px;
-}
-
 #profile-image {
-    width: 40px;
-    height: 40px;
+    align-self: flex-end;
     border-radius: 50%;
-    justify-self: end;
 }
 
 #admin-name {

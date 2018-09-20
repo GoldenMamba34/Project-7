@@ -50,6 +50,7 @@ div {
     height: 8vh;
     width: 100vw;
     display: flex;
+    align-items:flex-end;
     background-color: unquote(map-get($colors, "header"));
 }
 
@@ -72,7 +73,8 @@ div {
 
 
 #profile-image {
-@include setWidthAndHeight(40px, 40px);
+// @include setWidthAndHeight(40px, 40px);
+align-self:flex-end;
 border-radius:50%;
 }
 
