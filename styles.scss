@@ -15,7 +15,9 @@ $colors: (
     display: flex;
     flex-direction: column;
 }
-
+.tinyMargin {
+    margin-top: 20px;
+}
 .sideBarLink {
     margin: 20px 10px 10px;
     @include setWidthAndHeight(45px,45px)
@@ -48,7 +50,6 @@ div {
     height: 8vh;
     width: 100vw;
     display: flex;
-    flex-direction: row;
     background-color: unquote(map-get($colors, "header"));
 }
 
@@ -57,7 +58,7 @@ div {
 }
 
 #logo {
-    font-size: 175%;
+    font-size: 155%;
     font-weight: 500;
     color: white;
     height: 8vh;
@@ -66,17 +67,16 @@ div {
 }
 
 #bellIcon {
-    align-self: flex-end;
+    @include setWidthAndHeight(30px, 30px);
 }
 
-.tinyMargin {
-    margin-top: 20px;
-}
 
 #profile-image {
-@include setWidthAndHeight(50px, 50px);
+@include setWidthAndHeight(40px, 40px);
 border-radius:50%;
 }
+
+
 #admin-name {
     color:white;
 }
