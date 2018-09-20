@@ -8,8 +8,9 @@
 }
 
 .sideBarLink {
-    width: 55px;
-    height: 55px;
+    margin: 20px 10px 10px;
+    width: 45px;
+    height: 45px;
 }
 
 main {
@@ -20,22 +21,23 @@ main {
 }
 
 div {
-    border: 2px solid red;
     padding: 10px;
 }
 
 #sideBar {
+    grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 2;
     width: 6vw;
-    background-color: #5258ac;
+    height: calc(92vh - 40px);
+    background-color: #41468a;
 }
 
 #header {
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 5;
-    height: 5vw;
+    height: 8vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -47,14 +49,28 @@ div {
 }
 
 #logo {
-    font-size: 200%;
+    font-size: 175%;
     font-weight: 500;
     color: white;
-    height: 5vw;
+    height: 8vh;
     margin: 0;
     line-height: 5vw;
 }
 
 #bellIcon {
     align-self: flex-end;
+}
+
+.tinyMargin {
+    margin-top: 20px;
+}
+
+#profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#admin-name {
+    color: white;
 }
