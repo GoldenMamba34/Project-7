@@ -18,9 +18,10 @@ html {
 }
 
 .sideBarLink {
-    margin: 20px 10px 10px;
-    width: 45px;
-    height: 45px;
+    margin-left: calc(((100 - 75) / 2))%;
+    margin-right: calc(((100 - 75) / 2))%;
+    width: calc($sideBarWidth * ($percentOfSideBarWidthThatEachLinkIs / 100));
+    height: calc($sideBarWidth * ($percentOfSideBarWidthThatEachLinkIs / 100));
 }
 
 main {
@@ -106,8 +107,20 @@ div {
     display: flex;
 }
 
-@media (min-width: 768spx) {
+@media (min-width: 320px) {
     #sideBar {
         display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #sideBar {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    #sideBar {
+        display: block;
     }
 }
