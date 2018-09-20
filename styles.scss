@@ -2,17 +2,23 @@
     width: $width;
     height: $width;
 }
+$headerHeight: 8vh;
+
 $colors: (
     "header": #7479BD,
     "nav": darken(#7479BD, 20)
 );
+$divPadding: 10px;
+$sideBarWidth:6vw;
 
 * {
     font-family: Arial;
 }
 
-body {
-    overflow-x:none;
+body,
+html {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 #sideNav {
@@ -36,16 +42,17 @@ main {
     width: 100vw;
 }
 
+
 div {
-    padding: 10px;
+    padding: $divPadding;
 }
 
 #sideBar {
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 2;
-    width: 6vw;
-    height: calc(92vh - 40px);
+    width: $sideBarWidth;
+    height: calc(100vh - #{$headerHeight} - #{$divPadding});
     background-color: unquote(map-get($colors, "nav"));
 }
 
@@ -53,7 +60,7 @@ div {
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 5;
-    height: 8vh;
+    height: $headerHeight;
     width: 100vw;
     display: flex;
     background-color: unquote(map-get($colors, "header"));
@@ -67,39 +74,60 @@ div {
     font-size: 155%;
     font-weight: 500;
     color: white;
-    height: 8vh;
-    margin: 0;
-    line-height: 5vw;
-    margin-left:15px;
+    height: $headerHeight;
+    margin: 0 0 0 15px;
+    align-self: center;
+    line-height:$headerHeight;
+}
+@mixin icon {
+    width: calc(0.725 * #{$headerHeight});
+    height: calc(0.725 * #{$headerHeight});
 }
 
 #bellIcon {
-    @include setWidthAndHeight(30px, 30px);
-    margin-right:10px;
+    margin-right: 20px;
+    @include icon;
+    align-self: center;
 }
 
 #headerHr {
-    width:2px;
-    display:inline-block;
-    height:8vh;
-    background-color:black;
-    margin:0;
-    border:none;
+    width: 1px;
+    display: inline-block;
+    height: $headerHeight;
+    background-color: #666666;
+    margin: 0;
+    border: none;
 }
+
 #profile-image {
-    // @include setWidthAndHeight(40px, 40px);
     border-radius: 50%;
-        margin-left:10px;
+    margin-left: 10px;
+    @include icon;
+    align-self: center;
 }
 
 #admin-name {
     color: white;
-        display: inline-block;
-        line-height:8vh;
-margin-right:90px;
+    display: inline-block;
+    margin: 0;
+    align-self: center;
+    margin-left: 10px;
+    margin-right:15px;
 }
 
-.moveToLeft {
-        margin-left: auto;
+.moveToRight {
+    margin-left: auto;
+    margin-right: 25px;
+    display: flex;
+}
+@media (min-width:768px) {
+    #sideBar{
+        display:none;
+    }
+}
 
+@media (min-width:1024px) {
+    #sideBar{
+        display:none;
+    }
 }
