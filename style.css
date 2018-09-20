@@ -2,6 +2,10 @@
     font-family: Arial;
 }
 
+body {
+    overflow-x: none;
+}
+
 #sideNav {
     display: flex;
     flex-direction: column;
@@ -44,7 +48,6 @@ div {
     height: 8vh;
     width: 100vw;
     display: flex;
-    align-items: flex-end;
     background-color: #7479BD;
 }
 
@@ -59,18 +62,36 @@ div {
     height: 8vh;
     margin: 0;
     line-height: 5vw;
+    margin-left: 15px;
 }
 
 #bellIcon {
     width: 30px;
     height: 30px;
+    margin-right: 10px;
+}
+
+#headerHr {
+    width: 2px;
+    display: inline-block;
+    height: 8vh;
+    background-color: black;
+    margin: 0;
+    border: none;
 }
 
 #profile-image {
-    align-self: flex-end;
     border-radius: 50%;
+    margin-left: 10px;
 }
 
 #admin-name {
     color: white;
+    display: inline-block;
+    line-height: 8vh;
+    margin-right: 90px;
+}
+
+.moveToLeft {
+    margin-left: auto;
 }

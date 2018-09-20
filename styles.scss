@@ -4,20 +4,26 @@
 }
 $colors: (
     "header": #7479BD,
-    "nav":darken(#7479BD, 20)
+    "nav": darken(#7479BD, 20)
 );
 
 * {
     font-family: Arial;
 }
 
+body {
+    overflow-x:none;
+}
+
 #sideNav {
     display: flex;
     flex-direction: column;
 }
+
 .tinyMargin {
     margin-top: 20px;
 }
+
 .sideBarLink {
     margin: 20px 10px 10px;
     @include setWidthAndHeight(45px,45px)
@@ -50,7 +56,6 @@ div {
     height: 8vh;
     width: 100vw;
     display: flex;
-    align-items:flex-end;
     background-color: unquote(map-get($colors, "header"));
 }
 
@@ -65,20 +70,36 @@ div {
     height: 8vh;
     margin: 0;
     line-height: 5vw;
+    margin-left:15px;
 }
 
 #bellIcon {
     @include setWidthAndHeight(30px, 30px);
+    margin-right:10px;
 }
 
-
+#headerHr {
+    width:2px;
+    display:inline-block;
+    height:8vh;
+    background-color:black;
+    margin:0;
+    border:none;
+}
 #profile-image {
-// @include setWidthAndHeight(40px, 40px);
-align-self:flex-end;
-border-radius:50%;
+    // @include setWidthAndHeight(40px, 40px);
+    border-radius: 50%;
+        margin-left:10px;
 }
-
 
 #admin-name {
-    color:white;
+    color: white;
+        display: inline-block;
+        line-height:8vh;
+margin-right:90px;
+}
+
+.moveToLeft {
+        margin-left: auto;
+
 }
