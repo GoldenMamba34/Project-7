@@ -8,7 +8,7 @@ $colors: (
     "nav": darken(#7479BD, 20)
 );
 $divPadding: 10px;
-$sideBarWidth: 6vw;
+$sideBarWidth: 5vw;
 
 * {
     font-family: Arial;
@@ -30,17 +30,17 @@ html {
 }
 
 .sideBarLink.activeLink .st0 {
-    fill:white;
-    padding-left:10px;
-    border-left:5px solid #88DA84;
+    fill: white;
+    padding-left: 10px;
+    border-left: 5px solid #88DA84;
 }
-
 
 .sideBarLink {
     margin: 20px 10px 10px;
 }
-.sideBarLink .st0  {
-    fill:rgb(166,166,184);
+
+.sideBarLink .st0 {
+    fill: rgb(166,166,184);
 }
 
 main {
@@ -87,8 +87,8 @@ div {
     line-height: $headerHeight;
 }
 @mixin icon {
-    width: calc(0.725 * #{$headerHeight});
-    height: calc(0.725 * #{$headerHeight});
+    width: calc(0.65 * #{$headerHeight});
+    height: calc(0.65 * #{$headerHeight});
 }
 
 #bellIcon {
@@ -101,7 +101,7 @@ div {
     width: 1px;
     display: inline-block;
     height: $headerHeight;
-    background-color:darken(#7479BD, 10);
+    background-color: darken(#7479BD, 10);
     margin: 0;
     border: none;
 }
@@ -129,30 +129,19 @@ div {
 }
 
 #greenAlertCircle {
-    display:inline;
+    display: inline;
     position: absolute;
-    top:10px;
-    width:10px;
+    top: 10px;
+    width: 10px;
     height: 10px;
-    border-radius:50%;
-    background:#88DA85;
-
+    border-radius: 50%;
+    background: #88DA85;
 }
-
-
-
 
 #bellIconContainer {
 
+    
 }
-
-
-
-
-
-
-
-
 @media (min-width:320px) {
     #sideBar {
         display: none;
@@ -162,23 +151,29 @@ div {
     #sideBar {
         display: block;
     }
-    .sideBarLink {
-    @include setWidthAndHeight(65%,65%);
-    margin-left:17.5%;
-    margin-right:17.5%;
-    margin-top:25px;
-}
 
+    .sideBarLink {
+        @include setWidthAndHeight(55%,55%);
+        margin-left: 22.5%;
+        margin-right: 22.5%;
+        margin-top: 25px;
+    }
+
+    #sideBar {
+        width: 8vw;
+    }
 }
 @media (min-width:1024px) {
     #sideBar {
         display: block;
     }
+    #sideBar {
+        width: 6vw;
+    }
     .sideBarLink {
-        @include setWidthAndHeight(55%,55%);
-        margin-left:22.5%;
-        margin-right:22.5%;
-    margin-top:18px;
-}
-
+        @include setWidthAndHeight(45%,45%);
+        margin-left: 27.5;
+        margin-right: 27.5%;
+        margin-top: 30px;
+    }
 }

@@ -46,7 +46,7 @@ div {
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 2;
-    width: 6vw;
+    width: 5vw;
     height: calc(100vh - 8vh - 10px);
     background-color: #41468a;
 }
@@ -77,8 +77,8 @@ div {
 
 #bellIcon {
     margin-right: 15px;
-    width: calc(0.725 * 8vh);
-    height: calc(0.725 * 8vh);
+    width: calc(0.65 * 8vh);
+    height: calc(0.65 * 8vh);
     align-self: center;
 }
 
@@ -94,8 +94,8 @@ div {
 #profile-image {
     border-radius: 50%;
     margin-left: 20px;
-    width: calc(0.725 * 8vh);
-    height: calc(0.725 * 8vh);
+    width: calc(0.65 * 8vh);
+    height: calc(0.65 * 8vh);
     align-self: center;
 }
 
@@ -135,11 +135,14 @@ div {
         display: block;
     }
     .sideBarLink {
-        width: 65%;
-        height: 65%;
-        margin-left: 17.5%;
-        margin-right: 17.5%;
+        width: 55%;
+        height: 55%;
+        margin-left: 22.5%;
+        margin-right: 22.5%;
         margin-top: 25px;
+    }
+    #sideBar {
+        width: 8vw;
     }
 }
 
@@ -147,11 +150,14 @@ div {
     #sideBar {
         display: block;
     }
+    #sideBar {
+        width: 6vw;
+    }
     .sideBarLink {
-        width: 55%;
-        height: 55%;
-        margin-left: 22.5%;
-        margin-right: 22.5%;
-        margin-top: 18px;
+        width: 45%;
+        height: 45%;
+        margin-left: 27.5;
+        margin-right: 27.5%;
+        margin-top: 30px;
     }
 }
