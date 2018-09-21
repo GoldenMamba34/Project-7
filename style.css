@@ -18,10 +18,9 @@ html {
 }
 
 .sideBarLink {
-    margin-left: calc(((100 - 75) / 2))%;
-    margin-right: calc(((100 - 75) / 2))%;
-    width: calc($sideBarWidth * ($percentOfSideBarWidthThatEachLinkIs / 100));
-    height: calc($sideBarWidth * ($percentOfSideBarWidthThatEachLinkIs / 100));
+    margin: 20px 10px 10px;
+    width: calc($sideBarWidth * 0.75);
+    height: calc($sideBarWidth * 0.75);
 }
 
 main {
@@ -117,10 +116,24 @@ div {
     #sideBar {
         display: block;
     }
+    .sideBarLink {
+        width: 75%;
+        height: 75%;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
+        margin-top: 5px;
+    }
 }
 
 @media (min-width: 1024px) {
     #sideBar {
         display: block;
+    }
+    .sideBarLink {
+        width: 65%;
+        height: 65%;
+        margin-left: 17.5%;
+        margin-right: 17.5%;
+        margin-top: 10px;
     }
 }
