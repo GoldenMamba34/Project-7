@@ -138,15 +138,35 @@ div {
     background: #88DA85;
 }
 
-#bellIconContainer {
 
-    
+#navButton {
+    display:none;
 }
+
+
+
 @media (min-width:320px) {
     #sideBar {
         display: none;
     }
+    #logo {
+        font-size:110%;
+        margin-left:10px;
+    }
+    #navButton {
+        display:inline-block;
+    }
 }
+
+
+
+
+
+
+
+
+
+
 @media (min-width:768px) {
     #sideBar {
         display: block;
@@ -167,6 +187,7 @@ div {
     #sideBar {
         display: block;
     }
+
     #sideBar {
         width: 6vw;
     }
@@ -176,4 +197,5 @@ div {
         margin-right: 27.5%;
         margin-top: 30px;
     }
+
 }
