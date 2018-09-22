@@ -24,6 +24,10 @@ html {
     display: flex;
     flex-direction: column;
 }
+#navButton {
+outline: none;
+
+}
 
 .tinyMargin {
     margin-top: 20px;
@@ -139,9 +143,7 @@ div {
 }
 
 
-#navButton {
-    display:none;
-}
+
 
 
 
@@ -182,7 +184,11 @@ div {
     #sideBar {
         width: 8vw;
     }
+    #navButton {
+        display:none;
+    }
 }
+
 @media (min-width:1024px) {
     #sideBar {
         display: block;
@@ -196,6 +202,9 @@ div {
         margin-left: 27.5;
         margin-right: 27.5%;
         margin-top: 30px;
+    }
+    #navButton {
+        display:none;
     }
 
 }
