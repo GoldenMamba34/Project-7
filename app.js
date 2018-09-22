@@ -20,4 +20,16 @@ $(".sideBarLink").click(function() {
   return void 0;
 });
 
-$("#bellIcon").click(function() {});
+$("#bellIcon").click(function() {
+  $("#notifications").toggle(300);
+  $("#notifications").css("position", "absolute");
+  return $("#notifications").css("top", $("#bellIcon").position().top + 50);
+});
+
+$(".notificationExitButton").click(function(event) {
+  $(event.target).parent().slideUp(300);
+  $("#bellIcon").off();
+  if ($(".notification:hidden").length === $(".notification").length - 1) {
+    return $("#greenAlertCircle").hide(100);
+  }
+});

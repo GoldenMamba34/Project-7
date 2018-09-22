@@ -166,7 +166,39 @@ div {
     border-radius: 50%;
     background: #88DA85;
 }
+
+#notifications {
+display:none;
+}
+.notification {
+    background-color:grey;
+    color:white;
+    margin-bottom:10px;
+    padding:15px;
+    border-radius:7px;
+}
+.notification p {
+    display:inline;
+    width:80%;
+}
+.notificationExitButton {
+    background:none;
+    border:none;
+    outline:none;
+    display:inline-block;
+    float:right;
+    margin-left:20px;
+font-family: 'Lato', sans-serif;
+    font-size:25px;
+ vertical-align: middle;
+     line-height: calc(50% + 7.5px);
+     padding:0;
+}
+
 @media (min-width:320px) {
+    .notification p {
+        width:30%;
+    }
     #sideBar {
         display: none;
     }
@@ -193,6 +225,10 @@ div {
     }
 }
 @media (min-width:768px) {
+    .notification p {
+        width:40%;
+    }
+
     #sideBar {
         display: block;
     }
@@ -225,6 +261,9 @@ div {
     }
 }
 @media (min-width:1024px) {
+    .notification p {
+        width:60%;
+    }
     #sideBar {
         display: block;
     }

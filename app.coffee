@@ -11,6 +11,13 @@ $(".sideBarLink").click(->
     undefined
     )
 $("#bellIcon").click(->
+    $("#notifications").toggle(300)
+    $("#notifications").css("position","absolute")
+    $("#notifications").css("top",$("#bellIcon").position().top + 50)
+    )
 
-
+$(".notificationExitButton").click((event) ->
+    $(event.target).parent().slideUp(300)
+    $("#bellIcon").off()
+    $("#greenAlertCircle").hide(100) if $(".notification:hidden").length is $(".notification").length - 1
     )
