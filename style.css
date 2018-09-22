@@ -212,6 +212,9 @@ div {
     #navButton {
         display: none;
     }
+    #logo {
+        font-size: 145%;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -230,5 +233,8 @@ div {
     }
     #navButton {
         display: none;
+    }
+    #logo {
+        font-size: 155%;
     }
 }
