@@ -156,20 +156,30 @@ div {
     background: #88DA85;
 }
 @media (min-width:320px) {
+
     #sideBar {
         display: none;
     }
 
     #logo {
-        font-size: 110%;
+        font-size: 125%;
         margin-left: 10px;
     }
 
+        #header {
+    justify-content: space-between;
+}
     #navButton {
         display: inline-block;
     }
 
-    #header {}
+    #bellIcon {
+        margin-right:0;
+    }
+    .moveToRight {
+        margin-left:0;
+    }
+
 }
 @media (min-width:768px) {
     #sideBar {
@@ -194,6 +204,12 @@ div {
     #logo {
         font-size: 145%;
     }
+    #bellIcon {
+        margin-right:15px;
+    }
+    .moveToRight {
+        margin-left:auto;
+    }
 }
 @media (min-width:1024px) {
     #sideBar {
@@ -217,4 +233,11 @@ div {
     #logo {
         font-size: 155%;
     }
+    #bellIcon {
+        margin-right:15px;
+    }
+    .moveToRight {
+            margin-left:auto;
+    }
+
 }
