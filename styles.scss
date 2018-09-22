@@ -205,9 +205,9 @@ div {
     }
 
     .sideBarLink {
-        @include setWidthAndHeight(45%,45%);
-        margin-left: 27.5;
-        margin-right: 27.5%;
+        @include setWidthAndHeight(55%,55%);
+        margin-left: 22.5%;
+        margin-right: 22.5%;
         margin-top: 30px;
     }
 
