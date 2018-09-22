@@ -1,3 +1,5 @@
+// mixins and variables
+
 @mixin setWidthAndHeight($width, $height) {
     width: $width;
     height: $width;
@@ -21,6 +23,10 @@ $sideBarWidth: 5vw;
     }
 }
 
+
+
+
+// body and everything
 * {
     font-family: Arial;
 }
@@ -30,7 +36,7 @@ html {
     max-width: 100%;
     overflow-x: hidden;
 }
-
+// nav
 #sideNav {
     display: flex;
     flex-direction: column;
@@ -39,7 +45,11 @@ html {
 #navButton {
     outline: none;
 }
+#bellIcon:hover {
+    transform:scale(1.12);
 
+    transition-duration:.3s;
+}
 .tinyMargin {
     margin-top: 20px;
 }
@@ -57,6 +67,7 @@ html {
 .sideBarLink .st0 {
     fill: rgb(166,166,184);
 }
+
 
 main {
     display: grid;
@@ -156,7 +167,6 @@ div {
     background: #88DA85;
 }
 @media (min-width:320px) {
-
     #sideBar {
         display: none;
     }
@@ -166,20 +176,21 @@ div {
         margin-left: 10px;
     }
 
-        #header {
-    justify-content: space-between;
-}
+    #header {
+        justify-content: space-between;
+    }
+
     #navButton {
         display: inline-block;
     }
 
     #bellIcon {
-        margin-right:0;
-    }
-    .moveToRight {
-        margin-left:0;
+        margin-right: 0;
     }
 
+    .moveToRight {
+        margin-left: 0;
+    }
 }
 @media (min-width:768px) {
     #sideBar {
@@ -204,11 +215,13 @@ div {
     #logo {
         font-size: 145%;
     }
+
     #bellIcon {
-        margin-right:15px;
+        margin-right: 15px;
     }
+
     .moveToRight {
-        margin-left:auto;
+        margin-left: auto;
     }
 }
 @media (min-width:1024px) {
@@ -219,7 +232,6 @@ div {
     #sideBar {
         width: 6vw;
     }
-
     .sideBarLink {
         @include setWidthAndHeight(55%,55%);
         margin-left: 22.5%;
@@ -230,14 +242,16 @@ div {
     #navButton {
         display: none;
     }
+
     #logo {
         font-size: 155%;
     }
+
     #bellIcon {
-        margin-right:15px;
-    }
-    .moveToRight {
-            margin-left:auto;
+        margin-right: 15px;
     }
 
+    .moveToRight {
+        margin-left: auto;
+    }
 }

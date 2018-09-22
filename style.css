@@ -17,6 +17,11 @@ html {
     outline: none;
 }
 
+#bellIcon:hover {
+    transform: scale(1.12);
+    transition-duration: .3s;
+}
+
 .tinyMargin {
     margin-top: 20px;
 }

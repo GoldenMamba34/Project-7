@@ -1,10 +1,10 @@
-var sideBar;
+var sideBar, sideBarItems;
 
 sideBar = $("#sideBar");
 
+sideBarItems = $(".sideBarLink");
+
 $("#navButton").click(function() {
-  var sideBarItems;
-  sideBarItems = $(".sideBarLink");
   sideBar.css("width", "20vw");
   sideBarItems.css("width", "65%");
   return sideBar.toggle("slide", {
@@ -13,7 +13,11 @@ $("#navButton").click(function() {
 });
 
 $(".sideBarLink").click(function() {
-  return sideBar.hide("slide", {
+  sideBar.hide("slide", {
     direction: "left"
   }, 250);
+  $("#navButton").removeClass("is-active");
+  return void 0;
 });
+
+$("#bellIcon").click(function() {});
