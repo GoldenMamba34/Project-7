@@ -9,6 +9,17 @@ $colors: (
 );
 $divPadding: 10px;
 $sideBarWidth: 5vw;
+@mixin hideOnBigScreens {
+    @media (min-width:320px) {
+        display: none;
+    }
+    @media (min-width:768px) {
+        display: inline-block;
+    }
+    @media (min-width:768px) {
+        display: inline-block;
+    }
+}
 
 * {
     font-family: Arial;
@@ -24,9 +35,9 @@ html {
     display: flex;
     flex-direction: column;
 }
-#navButton {
-outline: none;
 
+#navButton {
+    outline: none;
 }
 
 .tinyMargin {
@@ -108,6 +119,7 @@ div {
     background-color: darken(#7479BD, 10);
     margin: 0;
     border: none;
+    @include hideOnBigScreens;
 }
 
 #profile-image {
@@ -115,6 +127,7 @@ div {
     margin-left: 20px;
     @include icon;
     align-self: center;
+    @include hideOnBigScreens;
 }
 
 #admin-name {
@@ -124,6 +137,7 @@ div {
     align-self: center;
     margin-left: 10px;
     margin-right: 10px;
+    @include hideOnBigScreens;
 }
 
 .moveToRight {
@@ -141,34 +155,22 @@ div {
     border-radius: 50%;
     background: #88DA85;
 }
-
-
-
-
-
-
 @media (min-width:320px) {
     #sideBar {
         display: none;
     }
+
     #logo {
-        font-size:110%;
-        margin-left:10px;
+        font-size: 110%;
+        margin-left: 10px;
     }
+
     #navButton {
-        display:inline-block;
+        display: inline-block;
     }
+
+    #header {}
 }
-
-
-
-
-
-
-
-
-
-
 @media (min-width:768px) {
     #sideBar {
         display: block;
@@ -184,11 +186,11 @@ div {
     #sideBar {
         width: 8vw;
     }
+
     #navButton {
-        display:none;
+        display: none;
     }
 }
-
 @media (min-width:1024px) {
     #sideBar {
         display: block;
@@ -197,14 +199,15 @@ div {
     #sideBar {
         width: 6vw;
     }
+
     .sideBarLink {
         @include setWidthAndHeight(45%,45%);
         margin-left: 27.5;
         margin-right: 27.5%;
         margin-top: 30px;
     }
-    #navButton {
-        display:none;
-    }
 
+    #navButton {
+        display: none;
+    }
 }
