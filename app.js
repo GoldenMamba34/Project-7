@@ -1,10 +1,19 @@
+var sideBar;
+
+sideBar = $("#sideBar");
+
 $("#navButton").click(function() {
-  var sideBar, sideBarItems;
+  var sideBarItems;
   sideBarItems = $(".sideBarLink");
-  sideBar = $("#sideBar");
   sideBar.css("width", "20vw");
   sideBarItems.css("width", "65%");
   return sideBar.toggle("slide", {
+    direction: "left"
+  }, 100);
+});
+
+$(".sideBarLink").click(function() {
+  return sideBar.hide("slide", {
     direction: "left"
   }, 100);
 });
