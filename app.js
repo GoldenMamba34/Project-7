@@ -6,5 +6,5 @@ $("#navButton").click(function() {
   sideBarItems.css("width", "65%");
   return sideBar.toggle("slide", {
     direction: "left"
-  }, 200);
+  }, 100);
 });

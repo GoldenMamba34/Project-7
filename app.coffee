@@ -3,5 +3,5 @@ $("#navButton").click(->
     sideBar = $("#sideBar")
     sideBar.css("width", "20vw")
     sideBarItems.css("width", "65%")
-    sideBar.toggle( "slide", {direction: "left" }, 200 )
+    sideBar.toggle( "slide", {direction: "left" }, 100 )
     )
