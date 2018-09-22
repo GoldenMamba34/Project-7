@@ -9,11 +9,11 @@ $("#navButton").click(function() {
   sideBarItems.css("width", "65%");
   return sideBar.toggle("slide", {
     direction: "left"
-  }, 100);
+  }, 150);
 });
 
 $(".sideBarLink").click(function() {
   return sideBar.hide("slide", {
     direction: "left"
-  }, 100);
+  }, 150);
 });
