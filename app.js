@@ -7,9 +7,10 @@ sideBarItems = $(".sideBarLink");
 $("#navButton").click(function() {
   sideBar.css("width", "20vw");
   sideBarItems.css("width", "65%");
-  return sideBar.toggle("slide", {
+  sideBar.toggle("slide", {
     direction: "left"
   }, 250);
+  return void 0;
 });
 
 $(".sideBarLink").click(function() {
@@ -21,17 +22,23 @@ $(".sideBarLink").click(function() {
 });
 
 $("#bellIcon").click(function() {
-  $("#notifications").toggle(300);
+  $("#notification").css("width", "40%");
   $("#notifications").css("position", "absolute");
   $("#notifications").css("top", $("header").position().top + $("#header").height() + 20);
   $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2);
-  return alert($("#bellIcon").position().left - $("#notifications").width() / 2);
+  $("#notifications").toggle("slide", {
+    direction: "up"
+  }, 300);
+  return void 0;
 });
 
 $(".notificationExitButton").click(function(event) {
   $(event.target).parent().slideUp(300);
-  $("#bellIcon").off();
   if ($(".notification:hidden").length === $(".notification").length - 1) {
-    return $("#greenAlertCircle").hide(100);
+    $("#greenAlertCircle").hide(150);
   }
+  if (".notification:hidden".length === $(".notification").length - 1) {
+    $("#bellIcon").off();
+  }
+  return void 0;
 });
