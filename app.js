@@ -23,7 +23,9 @@ $(".sideBarLink").click(function() {
 $("#bellIcon").click(function() {
   $("#notifications").toggle(300);
   $("#notifications").css("position", "absolute");
-  return $("#notifications").css("top", $("#bellIcon").position().top + 50);
+  $("#notifications").css("top", $("header").position().top + $("#header").height() + 20);
+  $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2);
+  return alert($("#bellIcon").position().left - $("#notifications").width() / 2);
 });
 
 $(".notificationExitButton").click(function(event) {
