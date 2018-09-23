@@ -226,10 +226,16 @@ font-family: 'Lato', sans-serif;
         margin-left: 0;
     }
     .sideBarLink {
-        @include setWidthAndHeight(65%,65%);
-        margin-left: 17.5%;
-        margin-right: 17.5%;
+        @include setWidthAndHeight(75%,75%);
+        margin-left: 12.5%;
+        margin-right: 12.5%;
         margin-top: 25px;
+    }
+    #notifications {
+    width:100%;
+    }
+    .notification p {
+        width:90%;
     }
 }
 
