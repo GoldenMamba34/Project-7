@@ -191,6 +191,14 @@ div {
     display: none;
 }
 
+.sideBarLink {
+    width: 65%;
+    height: 65%;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+    margin-top: 25px;
+}
+
 .notification {
     background-color: grey;
     color: white;
@@ -244,19 +252,22 @@ div {
     }
 }
 
+@media (min-width: 500px) {
+    .sideBarLink {
+        width: 50%;
+        height: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 25px;
+    }
+}
+
 @media (min-width: 768px) {
     .notification p {
         width: 40%;
     }
     #sideBar {
         display: block;
-    }
-    .sideBarLink {
-        width: 65%;
-        height: 65%;
-        margin-left: 17.5%;
-        margin-right: 17.5%;
-        margin-top: 25px;
     }
     #sideBar {
         width: 8vw;
@@ -286,11 +297,11 @@ div {
         width: 6vw;
     }
     .sideBarLink {
-        width: 55%;
-        height: 55%;
-        margin-left: 22.5%;
-        margin-right: 22.5%;
-        margin-top: 30px;
+        width: 70%;
+        height: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 25px;
     }
     #navButton {
         display: none;

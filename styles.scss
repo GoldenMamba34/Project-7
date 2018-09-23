@@ -170,6 +170,12 @@ div {
 #notifications {
 display:none;
 }
+.sideBarLink {
+    @include setWidthAndHeight(65%,65%);
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+    margin-top: 25px;
+}
 .notification {
     background-color:grey;
     color:white;
@@ -225,6 +231,16 @@ font-family: 'Lato', sans-serif;
         margin-left: 0;
     }
 }
+
+@media (min-width:500px) {
+
+    .sideBarLink {
+        @include setWidthAndHeight(50%,50%);
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 25px;
+    }
+}
 @media (min-width:768px) {
     .notification p {
         width:40%;
@@ -234,12 +250,6 @@ font-family: 'Lato', sans-serif;
         display: block;
     }
 
-    .sideBarLink {
-        @include setWidthAndHeight(65%,65%);
-        margin-left: 17.5%;
-        margin-right: 17.5%;
-        margin-top: 25px;
-    }
 
     #sideBar {
         width: 8vw;
@@ -273,10 +283,10 @@ font-family: 'Lato', sans-serif;
         width: 6vw;
     }
     .sideBarLink {
-        @include setWidthAndHeight(55%,55%);
-        margin-left: 22.5%;
-        margin-right: 22.5%;
-        margin-top: 30px;
+        @include setWidthAndHeight(70%,70%);
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 25px;
     }
 
     #navButton {
