@@ -170,12 +170,7 @@ div {
 #notifications {
 display:none;
 }
-.sideBarLink {
-    @include setWidthAndHeight(65%,65%);
-    margin-left: 17.5%;
-    margin-right: 17.5%;
-    margin-top: 25px;
-}
+
 .notification {
     background-color:grey;
     color:white;
@@ -230,14 +225,20 @@ font-family: 'Lato', sans-serif;
     .moveToRight {
         margin-left: 0;
     }
+    .sideBarLink {
+        @include setWidthAndHeight(65%,65%);
+        margin-left: 17.5%;
+        margin-right: 17.5%;
+        margin-top: 25px;
+    }
 }
 
-@media (min-width:500px) {
+@media (min-width:568px) {
 
     .sideBarLink {
         @include setWidthAndHeight(50%,50%);
         margin-left: 25%;
-        margin-right: 25%;
+        margin-right:25%;
         margin-top: 25px;
     }
 }
@@ -269,6 +270,12 @@ font-family: 'Lato', sans-serif;
 
     .moveToRight {
         margin-left: auto;
+    }
+    .sideBarLink {
+        @include setWidthAndHeight(65%,65%);
+        margin-left: 17.5%;
+        margin-right: 17.5%;
+        margin-top: 25px;
     }
 }
 @media (min-width:1024px) {

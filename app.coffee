@@ -1,13 +1,13 @@
 sideBar = $("#sideBar")
 sideBarItems = $(".sideBarLink")
 $("#navButton").click(->
-    sideBar.css("width", "20vw")
+    sideBar.css("width", "15vw")
 
     sideBar.toggle( "slide", {direction: "left" }, 250 )
     undefined
     )
 $(".sideBarLink").click(->
-    sideBar.hide( "slide", {direction: "left" }, 250 )
+    sideBar.hide( "slide", {direction: "left" }, 250 ) if $(document).width() < 769
     $("#navButton").removeClass("is-active")
     undefined
     )

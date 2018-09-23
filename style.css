@@ -191,14 +191,6 @@ div {
     display: none;
 }
 
-.sideBarLink {
-    width: 65%;
-    height: 65%;
-    margin-left: 17.5%;
-    margin-right: 17.5%;
-    margin-top: 25px;
-}
-
 .notification {
     background-color: grey;
     color: white;
@@ -250,9 +242,16 @@ div {
     .moveToRight {
         margin-left: 0;
     }
+    .sideBarLink {
+        width: 65%;
+        height: 65%;
+        margin-left: 17.5%;
+        margin-right: 17.5%;
+        margin-top: 25px;
+    }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 568px) {
     .sideBarLink {
         width: 50%;
         height: 50%;
@@ -283,6 +282,13 @@ div {
     }
     .moveToRight {
         margin-left: auto;
+    }
+    .sideBarLink {
+        width: 65%;
+        height: 65%;
+        margin-left: 17.5%;
+        margin-right: 17.5%;
+        margin-top: 25px;
     }
 }
 

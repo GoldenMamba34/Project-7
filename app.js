@@ -5,7 +5,7 @@ sideBar = $("#sideBar");
 sideBarItems = $(".sideBarLink");
 
 $("#navButton").click(function() {
-  sideBar.css("width", "20vw");
+  sideBar.css("width", "15vw");
   sideBar.toggle("slide", {
     direction: "left"
   }, 250);
@@ -13,9 +13,11 @@ $("#navButton").click(function() {
 });
 
 $(".sideBarLink").click(function() {
-  sideBar.hide("slide", {
-    direction: "left"
-  }, 250);
+  if ($(document).width() < 769) {
+    sideBar.hide("slide", {
+      direction: "left"
+    }, 250);
+  }
   $("#navButton").removeClass("is-active");
   return void 0;
 });
