@@ -231,12 +231,9 @@ font-family: 'Lato', sans-serif;
         margin-right: 12.5%;
         margin-top: 25px;
     }
-    #notifications {
-    width:100%;
-    }
-    .notification p {
-        width:90%;
-    }
+#notifications {
+        width: 70%;
+}
 }
 
 @media (min-width:568px) {
@@ -283,6 +280,11 @@ font-family: 'Lato', sans-serif;
         margin-right: 17.5%;
         margin-top: 25px;
     }
+    #notifications {
+width:50%;
+padding-right:10%;
+    }
+
 }
 @media (min-width:1024px) {
     .notification p {
@@ -316,5 +318,9 @@ font-family: 'Lato', sans-serif;
 
     .moveToRight {
         margin-left: auto;
+    }
+    #notifications {
+width:50%;
+padding-right:10%;
     }
 }

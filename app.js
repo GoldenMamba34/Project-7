@@ -23,7 +23,6 @@ $(".sideBarLink").click(function() {
 });
 
 $("#bellIcon").click(function() {
-  $("#notification").css("width", "40%");
   $("#notifications").css("position", "absolute");
   $("#notifications").css("top", $("header").position().top + $("#header").height() + 20);
   $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2);

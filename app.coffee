@@ -12,11 +12,11 @@ $(".sideBarLink").click(->
     undefined
     )
 $("#bellIcon").click(->
-    $("#notification").css("width", "40%")
+
     $("#notifications").css("position","absolute")
     $("#notifications").css("top",$("header").position().top + $("#header").height() + 20 )
     $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2  )
-
+    
     $("#notifications").toggle("slide", {direction: "up" }, 300 )
     undefined
     )
