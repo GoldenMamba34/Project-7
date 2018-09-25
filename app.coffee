@@ -15,8 +15,8 @@ $("#bellIcon").click(->
 
     $("#notifications").css("position","absolute")
     $("#notifications").css("top",$("header").position().top + $("#header").height() + 20 )
-    $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2  )
-    
+    $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() )
+
     $("#notifications").toggle("slide", {direction: "up" }, 300 )
     undefined
     )

@@ -200,8 +200,9 @@ div {
 }
 
 .notification p {
-    display: inline;
-    width: 80%;
+    display: inline-block;
+    width: 90%;
+    margin: 0;
 }
 
 .notificationExitButton {
@@ -220,9 +221,6 @@ div {
 }
 
 @media (min-width: 320px) {
-    .notification p {
-        width: 30%;
-    }
     #sideBar {
         display: none;
     }
@@ -250,7 +248,9 @@ div {
         margin-top: 25px;
     }
     #notifications {
-        width: 70%;
+        font-size: 90%;
+        width: 60%;
+        padding-right: 10%;
     }
 }
 
@@ -265,9 +265,6 @@ div {
 }
 
 @media (min-width: 768px) {
-    .notification p {
-        width: 40%;
-    }
     #sideBar {
         display: block;
     }
@@ -295,14 +292,10 @@ div {
     }
     #notifications {
         width: 50%;
-        padding-right: 10%;
     }
 }
 
 @media (min-width: 1024px) {
-    .notification p {
-        width: 60%;
-    }
     #sideBar {
         display: block;
     }
@@ -327,9 +320,5 @@ div {
     }
     .moveToRight {
         margin-left: auto;
-    }
-    #notifications {
-        width: 50%;
-        padding-right: 10%;
     }
 }
