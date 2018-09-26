@@ -199,6 +199,18 @@ div {
     transform: scale(1.12);
     transition-duration: 0.25s;
 }
+
+
+
+#dashboardContent {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+
+
 @media (min-width:320px) {
     #sideBar {
         display: none;
