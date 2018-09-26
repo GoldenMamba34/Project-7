@@ -19,7 +19,7 @@ html {
 
 #bellIcon:hover {
     transform: scale(1.12);
-    transition-duration: .3s;
+    transition-duration: 0.25s;
 }
 
 .tinyMargin {
@@ -211,13 +211,17 @@ div {
     outline: none;
     display: inline-block;
     float: right;
-    margin-left: 20px;
     padding-top: 5px;
     font-family: 'Lato', sans-serif;
     font-size: 25px;
     vertical-align: middle;
-    line-height: calc(50% + 7.5px);
+    line-height: 100%;
     padding: 0;
+}
+
+.notificationExitButton:hover {
+    transform: scale(1.12);
+    transition-duration: 0.25s;
 }
 
 @media (min-width: 320px) {
@@ -249,8 +253,9 @@ div {
     }
     #notifications {
         font-size: 90%;
-        width: 60%;
+        width: 80%;
         padding-right: 10%;
+        font-size: 90%;
     }
 }
 
@@ -261,6 +266,9 @@ div {
         margin-left: 25%;
         margin-right: 25%;
         margin-top: 25px;
+    }
+    #notifications {
+        width: 60%;
     }
 }
 
@@ -291,7 +299,8 @@ div {
         margin-top: 25px;
     }
     #notifications {
-        width: 50%;
+        width: 60%;
+        font-size: 100%;
     }
 }
 
@@ -320,5 +329,9 @@ div {
     }
     .moveToRight {
         margin-left: auto;
+    }
+    #notifications {
+        width: 40%;
+        font-size: 100%;
     }
 }

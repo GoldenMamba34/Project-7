@@ -25,15 +25,21 @@ $(".sideBarLink").click(function() {
 $("#bellIcon").click(function() {
   $("#notifications").css("position", "absolute");
   $("#notifications").css("top", $("header").position().top + $("#header").height() + 20);
-  $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2);
+  if ($(document).width() > 768) {
+    $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2 - $(document).width() * .1);
+  } else if ($(document).width() > 568) {
+    $("#notifications").css("left", "30%");
+  } else {
+    $("#notifications").css("left", "10%");
+  }
   $("#notifications").toggle("slide", {
     direction: "up"
-  }, 300);
+  }, 250);
   return void 0;
 });
 
 $(".notificationExitButton").click(function(event) {
-  $(event.target).parent().slideUp(300);
+  $(event.target).parent().slideUp(250);
   if ($(".notification:hidden").length === $(".notification").length - 1) {
     $("#greenAlertCircle").hide(150);
   }
