@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <link rel="stylesheet" href="hamburgers.css">
     <meta charset="utf-8">
     <title>YourApp&trade;</title>
@@ -43,6 +44,43 @@
             </div>
         </header>
     </main>
+
+
+    <div id="dashboardContent">
+
+
+<header>
+    <h2>Dashboard</h2>
+    <input type="text" id="search" placeholder="Search">
+
+    <div class="alert">
+        <p><strong>Alert </strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button type="button" id="alertExit">X</button>
+    </div>
+
+
+    <div id="charts">
+
+        <div id="trafficChartContainer">
+            <h2 class="chartTitle">TRAFFIC</h2>
+<canvas id="trafficChart" width="300" height="300"></canvas>
+        </div>
+
+        <div id="charts">
+
+        </div>
+
+        <div id="charts">
+
+        </div>
+    </div>
+
+</header>
+
+
+
+
+    </div>
     <script>
         var forEach = function(t, o, r) {
             if ("[object Object]" === Object.prototype.toString.call(t))
@@ -60,6 +98,7 @@
         }
     </script>
     <script src="app.js" charset="utf-8"></script>
+
 </body>
 
 </html>

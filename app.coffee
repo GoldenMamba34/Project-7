@@ -15,7 +15,7 @@ $("#bellIcon").click(->
     $("#notifications").css("position","absolute")
     $("#notifications").css("top",$("header").position().top + $("#header").height() + 20 )
     if $(document).width() > 768
-        $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2 -  $(document).width() * .1)
+        $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2 - $(document).width() * .1)
     else if $(document).width() > 568
         $("#notifications").css("left","30%")
     else
@@ -31,3 +31,34 @@ $(".notificationExitButton").click((event) ->
     $("#bellIcon").off() if (".notification:hidden").length is $(".notification").length - 1
     undefined
     )
+ctx = document.getElementById('trafficChart').getContext('2d')
+chart = new Chart(ctx,
+  type: 'line'
+  data:
+    labels: [
+        '16-22'
+        '23-29'
+        '30-36'
+        '37-43'
+        '44-50'
+        '51-57'
+        '58-64'
+        '65-71'
+        '72-78'
+        '79-85'
+        '86-92'
+        '93-99'
+    ]
+    datasets: [ {
+      label: 'My First dataset'
+      backgroundColor: 'rgba(226, 227, 246, .75)'
+      borderColor: '#005ebc'
+      data: [
+        500
+        1000
+        1500
+        2000
+        2500
+      ]
+    } ]
+  options: {responsive:true})
