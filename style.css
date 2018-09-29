@@ -19,7 +19,6 @@ html {
 
 #bellIcon:hover {
     transform: scale(1.12);
-    transition-duration: 0.25s;
 }
 
 .tinyMargin {
@@ -43,7 +42,6 @@ html {
 main {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 10px;
     width: 100vw;
 }
 
@@ -52,7 +50,7 @@ div {
 }
 
 #sideBar {
-    grid-row-start: 2;
+    grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 2;
     width: 5vw;
@@ -89,6 +87,7 @@ div {
     width: calc(0.65 * 8vh);
     height: calc(0.65 * 8vh);
     align-self: center;
+    transition-duration: 0.25s;
 }
 
 #headerHr {
@@ -225,9 +224,94 @@ div {
 }
 
 #dashboardContent {
-    grid-row-start: 2;
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background: white;
+}
+
+#mainDashboardTitle {
+    color: #6E6D6D;
+}
+
+.search-container {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+input#search-bar {
+    border-radius: 7px;
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    outline: none;
+}
+
+input#search-bar:focus {
+    border: 1px solid #008ABF;
+    transition: 0.35s ease;
+    color: #008ABF;
+}
+
+input#search-bar:focus::-webkit-input-placeholder {
+    transition: opacity 0.45s ease;
+    opacity: 0;
+}
+
+input#search-bar:focus::-moz-placeholder {
+    transition: opacity 0.45s ease;
+    opacity: 0;
+}
+
+input#search-bar:focus:-ms-placeholder {
+    transition: opacity 0.45s ease;
+    opacity: 0;
+}
+
+.search-icon {
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+    right: -45px;
+}
+
+.alert {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #7377BF;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    display: inline-block;
+    height: 21px;
+}
+
+.alert p {
+    display: inline-block;
+    margin: 0;
+    line-height: 21px;
+}
+
+.alertExit {
+    float: right;
+    color: white;
+    background: none;
+    outline: none;
+    border: none;
+    transition-duration: 0.25s;
+    line-height: 21px;
+    font-size: 18px;
+}
+
+.alertExit:hover {
+    transform: scale(1.5);
 }
 
 @media (min-width: 320px) {
@@ -315,7 +399,7 @@ div {
         display: block;
     }
     #sideBar {
-        width: 6vw;
+        width: 5vw;
     }
     .sideBarLink {
         width: 70%;
