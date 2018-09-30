@@ -51,8 +51,6 @@ Chart.defaults.global.title.display = false;
 
 Chart.defaults.global.legend.position = "right";
 
-Chart.defaults.global.legend.fullWidth = true;
-
 ctx = document.getElementById('trafficChart').getContext('2d');
 
 chart = new Chart(ctx, {

@@ -234,6 +234,11 @@ div {
     color: #6E6D6D;
 }
 
+.dashboardTitle {
+    color: #6E6D6D;
+    font-size: 130%;
+}
+
 .search-container {
     width: 30%;
     display: block;
@@ -312,6 +317,18 @@ input#search-bar:focus:-ms-placeholder {
 
 .alertExit:hover {
     transform: scale(1.3);
+}
+
+.socialStatCard {
+    background: #FBFBFB;
+}
+
+#socialStats {
+    display: flex;
+}
+
+#dashboardContent {
+    display: grid;
 }
 
 @media (min-width: 320px) {
