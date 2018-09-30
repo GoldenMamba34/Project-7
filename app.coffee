@@ -31,6 +31,10 @@ $(".notificationExitButton").click((event) ->
     $("#bellIcon").off() if (".notification:hidden").length is $(".notification").length - 1
     undefined
     )
+
+Chart.defaults.global.title.display = false
+Chart.defaults.global.legend.position = "right"
+Chart.defaults.global.legend.fullWidth = true
 ctx = document.getElementById('trafficChart').getContext('2d')
 chart = new Chart(ctx,
     type: 'line'
@@ -53,6 +57,7 @@ chart = new Chart(ctx,
             label: 'My First dataset'
             backgroundColor: 'rgba(226, 227, 246, .75)'
             borderColor: '#005ebc'
+
             data: [
                 500
                 1000
@@ -70,23 +75,17 @@ chart = new Chart(ctx,
     type: 'bar'
     data:
         labels: [
-            '16-22'
-            '23-29'
-            '30-36'
-            '37-43'
-            '44-50'
-            '51-57'
-            '58-64'
-            '65-71'
-            '72-78'
-            '79-85'
-            '86-92'
-            '93-99'
-        ]
+            'S'
+            'M'
+            'T'
+            'W'
+            'T'
+            'F'
+            'S' ]
         datasets: [ {
             label: 'My First dataset'
-            backgroundColor: 'rgba(226, 227, 246, .75)'
-            borderColor: '#005ebc'
+            backgroundColor: '#7377BF'
+            borderColor: '#7377BF'
             data: [
                 500
                 1000
@@ -110,12 +109,17 @@ chart = new Chart(ctx,
         ]
         datasets: [ {
             label: 'My First dataset'
-            backgroundColor: 'rgba(226, 227, 246, .75)'
+            backgroundColor: [
+                '#81C98F'
+                '#74B1BF'
+                '#005ebc'
+            ]
             borderColor: '#005ebc'
             data: [
-                65
                 18
                 27
+                65
             ]
         } ]
+
     options: {responsive:true})
