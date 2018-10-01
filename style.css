@@ -493,15 +493,10 @@ input#search-bar:focus:-ms-placeholder {
     line-height: 21px;
 }
 
-#trafficChartContainer {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 6;
-}
-
 #dashboardSections {
     display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto auto auto;
 }
 
 .alertExit {
