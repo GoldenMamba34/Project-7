@@ -37,6 +37,7 @@ Chart.defaults.global.legend.position = "right"
 
 
 
+
 ctx = document.getElementById('trafficChart').getContext('2d')
 chart = new Chart(ctx,
     type: 'line'

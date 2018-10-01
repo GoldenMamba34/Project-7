@@ -412,12 +412,16 @@ div {
     grid-column-end: 5;
     background: white;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto auto auto;
+    padding: 0;
 }
 
 #mainDashboardTitle {
     color: #6E6D6D;
+    margin: 20px;
+    display: inline-block;
+    width: 10%;
 }
 
 .dashboardTitle {
@@ -427,8 +431,9 @@ div {
 
 .search-container {
     width: 30%;
-    display: block;
-    margin: 0 auto;
+    margin-left: calc(100% - (50% + 70px));
+    display: inline-block;
+    padding: 0;
 }
 
 input#search-bar {
@@ -485,6 +490,7 @@ input#search-bar:focus:-ms-placeholder {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 6;
+    background: black;
 }
 
 .alert p {
@@ -495,8 +501,8 @@ input#search-bar:focus:-ms-placeholder {
 
 #dashboardSections {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     background: red;
 }
 
@@ -561,7 +567,7 @@ input#search-bar:focus:-ms-placeholder {
     grid-row-end: 6;
     grid-column-start: 2;
     grid-column-end: 3;
-    background: #1e1e1e;
+    background: #3c3c1e;
 }
 
 .alertExit {
@@ -592,6 +598,7 @@ input#search-bar:focus:-ms-placeholder {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 6;
+    background: black;
 }
 
 @media (min-width: 320px) {
