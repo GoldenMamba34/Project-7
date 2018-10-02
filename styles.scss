@@ -399,14 +399,14 @@ div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto auto auto;
-    padding:0;
+    padding: 0;
 }
 
 #mainDashboardTitle {
     color: #6E6D6D;
-    margin:20px;
+    margin: 20px;
     display: inline-block;
-    width:10%;
+    width: 10%;
 }
 
 .dashboardTitle {
@@ -416,9 +416,10 @@ div {
 
 .search-container {
     width: 30%;
-    margin-left:calc(100% - (50% + 70px);
     display: inline-block;
-    padding:0;
+    padding: 0;
+    position: relative;
+    left: calc(40% + 80px);
 }
 
 input#search-bar {
@@ -475,7 +476,7 @@ input#search-bar {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 6;
-        background:black;
+    background: black;
 }
 
 .alert p {
@@ -487,8 +488,8 @@ input#search-bar {
 #dashboardSections {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
-    background:red;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background: red;
 }
 
 #trafficChartContainer {
@@ -496,7 +497,7 @@ input#search-bar {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
-    background:orange;
+    background: orange;
 }
 
 #dailyTrafficChartContainer {
@@ -504,7 +505,7 @@ input#search-bar {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
-        background:yellow;
+    background: yellow;
 }
 
 #mobileUsersChartContainer {
@@ -512,7 +513,7 @@ input#search-bar {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
-            background:green;
+    background: green;
 }
 
 #socialStats {
@@ -520,7 +521,7 @@ input#search-bar {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3;
-            background:blue;
+    background: blue;
 }
 
 #newMembers {
@@ -528,14 +529,15 @@ input#search-bar {
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-            background:purple;
+    background: purple;
 }
+
 #recentActivity {
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 2;
     grid-column-end: 3;
-            background:rgb(132,103,254);
+    background: rgb(132,103,254);
 }
 
 #messageUser {
@@ -543,7 +545,7 @@ input#search-bar {
     grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 2;
-            background:rgb(0, 232, 255);
+    background: rgb(0, 232, 255);
 }
 
 #settings {
@@ -551,8 +553,9 @@ input#search-bar {
     grid-row-end: 6;
     grid-column-start: 2;
     grid-column-end: 3;
-    background:rgb(60,60,30);
+    background: rgb(60,60,30);
 }
+
 .alertExit {
     float: right;
     color: white;
@@ -581,7 +584,7 @@ input#search-bar {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 6;
-    background:black;
+    // background: black;
 }
 @media (min-width:320px) {
     #sideBar {

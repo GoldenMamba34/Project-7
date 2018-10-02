@@ -431,9 +431,10 @@ div {
 
 .search-container {
     width: 30%;
-    margin-left: calc(100% - (50% + 70px));
     display: inline-block;
     padding: 0;
+    position: relative;
+    left: calc(40% + 80px);
 }
 
 input#search-bar {
@@ -598,7 +599,6 @@ input#search-bar:focus:-ms-placeholder {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 6;
-    background: black;
 }
 
 @media (min-width: 320px) {
