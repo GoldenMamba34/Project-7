@@ -5,7 +5,9 @@
 
 
 
+$("#sendEmailNotifications").prop('checked', localStorage.getItem('sendEmailNotifications') is "true")
 
+$("#setProfileToPublic").prop('checked', localStorage.getItem('setProfileToPublic') is "true")
 
 
 sideBar = $("#sideBar")
@@ -159,9 +161,9 @@ $("#sendMessage").click(->
 
 
 
-$("sendEmailNotifications").change(->
+$("#sendEmailNotifications").change(->
     localStorage.setItem('sendEmailNotifications', this.checked)
     )
-$("setProfileToPublic").change(->
+$("#setProfileToPublic").change(->
     localStorage.setItem('setProfileToPublic', this.checked)
     )

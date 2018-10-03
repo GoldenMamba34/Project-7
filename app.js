@@ -1,5 +1,9 @@
 var chart, ctx, sideBar, sideBarItems;
 
+$("#sendEmailNotifications").prop('checked', localStorage.getItem('sendEmailNotifications') === "true");
+
+$("#setProfileToPublic").prop('checked', localStorage.getItem('setProfileToPublic') === "true");
+
 sideBar = $("#sideBar");
 
 sideBarItems = $(".sideBarLink");
@@ -142,10 +146,10 @@ $("#sendMessage").click(function() {
   }
 });
 
-$("sendEmailNotifications").change(function() {
+$("#sendEmailNotifications").change(function() {
   return localStorage.setItem('sendEmailNotifications', this.checked);
 });
 
-$("setProfileToPublic").change(function() {
+$("#setProfileToPublic").change(function() {
   return localStorage.setItem('setProfileToPublic', this.checked);
 });
