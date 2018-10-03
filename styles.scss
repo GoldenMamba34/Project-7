@@ -41,6 +41,7 @@ input.iosSwitch {
     display: inline-block;
     border-radius: 50px;
     background: white;
+    -webkit-box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
     box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
     width: 56px;
     height: 36px;
@@ -49,68 +50,113 @@ input.iosSwitch {
     position: relative;
     -moz-user-select: none;
     -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
+    -webkit-animation: input 4s;
     animation: input 4s;
 }
 
 input.iosSwitch.checked,
 input.iosSwitch:checked {
     background: #53D669;
+    -webkit-box-shadow: inset 0 0 0 15px #53D669;
     box-shadow: inset 0 0 0 15px #53D669;
+    -webkit-transition: 250ms all;
     transition: 250ms all;
 }
 
 input.iosSwitch::before {
     content: '';
+    -webkit-transition: 300ms all;
     transition: 300ms all;
     position: absolute;
     left: 2px;
     top: 2px;
     bottom: 2px;
     right: auto;
+    -webkit-transform: translate(0,0);
     transform: translate(0,0);
     display: block;
     width: 32px;
     height: 32px;
     border-radius: 40px;
     background: #FFFFFF;
+    -webkit-box-shadow: 0 0 12px 0 rgba(0,0,0,0.06), 0 0 0 0 rgba(0,0,0,0.06), 0 6px 10px 0 rgba(0,0,0,0.15), 0 0 2px 0 rgba(0,0,0,0.07), 0 4px 6px 0 rgba(0,0,0,0.06), 0 1px 1px 0 rgba(0,0,0,0.11);
     box-shadow: 0 0 12px 0 rgba(0,0,0,0.06), 0 0 0 0 rgba(0,0,0,0.06), 0 6px 10px 0 rgba(0,0,0,0.15), 0 0 2px 0 rgba(0,0,0,0.07), 0 4px 6px 0 rgba(0,0,0,0.06), 0 1px 1px 0 rgba(0,0,0,0.11);
+    -webkit-animation: button 3s ease-out;
     animation: button 3s ease-out;
 }
 
 input.iosSwitch.checked::before,
 input.iosSwitch:checked::before {
+    -webkit-transform: translate(20px,0);
     transform: translate(20px,0);
 }
 
 input.iosSwitch.red:checked {
     background: #FF4F2F;
+    -webkit-box-shadow: inset 0 0 0 15px #FF4F2F;
     box-shadow: inset 0 0 0 15px #FF4F2F;
 }
 
 input.iosSwitch.orange:checked {
     background: #FFAC42;
+    -webkit-box-shadow: inset 0 0 0 15px #FFAC42;
     box-shadow: inset 0 0 0 15px #FFAC42;
 }
 
 input.iosSwitch.yellow:checked {
     background: #FFE842;
+    -webkit-box-shadow: inset 0 0 0 15px #FFE842;
     box-shadow: inset 0 0 0 15px #FFE842;
 }
 
 input.iosSwitch.green:checked {
     background: #50DF3D;
+    -webkit-box-shadow: inset 0 0 0 15px #50DF3D;
     box-shadow: inset 0 0 0 15px #50DF3D;
 }
 
 input.iosSwitch.blue:checked {
     background: #40A7ED;
+    -webkit-box-shadow: inset 0 0 0 15px #40A7ED;
     box-shadow: inset 0 0 0 15px #40A7ED;
 }
 
 input.iosSwitch.purple:checked {
     background: #AF57EC;
+    -webkit-box-shadow: inset 0 0 0 15px #AF57EC;
     box-shadow: inset 0 0 0 15px #AF57EC;
+}
+
+@-webkit-keyframes 'message' {
+    0% {
+        opacity: 0;
+        height: 0;
+        margin: 0 auto;
+        padding: 0 5px;
+    }
+
+    5% {
+        opacity: 1;
+        height: 18px;
+        margin: 0 auto 15px;
+        padding: 5px;
+    }
+
+    95% {
+        opacity: 1;
+        height: 18px;
+        margin: 0 auto 15px;
+        padding: 5px;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0;
+        margin: 0 auto;
+        padding: 0 5px;
+    }
 }
 
 @keyframes 'message' {
@@ -143,10 +189,11 @@ input.iosSwitch.purple:checked {
     }
 }
 
-@keyframes 'input' {
+@-webkit-keyframes 'input' {
     0% {
         opacity: 0;
         background: white;
+        -webkit-box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
         box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
         pointer-events: none;
     }
@@ -154,6 +201,7 @@ input.iosSwitch.purple:checked {
     20% {
         opacity: 0;
         background: white;
+        -webkit-box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
         box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
         pointer-events: none;
     }
@@ -161,22 +209,79 @@ input.iosSwitch.purple:checked {
     100% {
         background: white;
         opacity: 1;
+        -webkit-box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
         box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
         pointer-events: auto;
     }
 }
 
-@keyframes 'button' {
+@keyframes 'input' {
     0% {
+        opacity: 0;
+        background: white;
+        -webkit-box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
+        box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
+        pointer-events: none;
+    }
+
+    20% {
+        opacity: 0;
+        background: white;
+        -webkit-box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
+        box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
+        pointer-events: none;
+    }
+
+    100% {
+        background: white;
+        opacity: 1;
+        -webkit-box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
+        box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
+        pointer-events: auto;
+    }
+}
+
+@-webkit-keyframes 'button' {
+    0% {
+        -webkit-transform: translate3d(20px,0,0);
         transform: translate3d(20px,0,0);
     }
 
     20% {
+        -webkit-transform: translate3d(20px,0,0);
         transform: translate3d(20px,0,0);
     }
 
     100% {
+        -webkit-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes 'button' {
+    0% {
+        -webkit-transform: translate3d(20px,0,0);
+        transform: translate3d(20px,0,0);
+    }
+
+    20% {
+        -webkit-transform: translate3d(20px,0,0);
+        transform: translate3d(20px,0,0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+@-webkit-keyframes 'header' {
+    from {
+        text-shadow: 0 1px 10px white, 0 0 20px rgba(255,0,0,.4);
+    }
+
+    to {
+        text-shadow: 0 1px 0 white, 0 2px 0 rgba(0,0,0,.2);
     }
 }
 
@@ -201,6 +306,7 @@ ul {
     display: block;
     border-radius: 1px;
     border: 1px solid rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 0 0 5px rgba(0,0,0,.02);
     box-shadow: 0 0 0 5px rgba(0,0,0,.02);
 }
 
@@ -215,6 +321,7 @@ code {
     border: 1px dotted #026083;
     border-radius: 2px;
     color: #026083;
+    -webkit-box-shadow: inset 0 0 0 1px white;
     box-shadow: inset 0 0 0 1px white;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -226,7 +333,12 @@ code {
 // nav
 
 #sideNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -235,6 +347,7 @@ code {
 }
 
 #bellIcon:hover {
+    -webkit-transform: scale(1.12);
     transform: scale(1.12);
 }
 
@@ -281,6 +394,8 @@ div {
     grid-column-end: 5;
     height: $headerHeight;
     width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: unquote(map-get($colors, "header"));
 }
@@ -295,6 +410,7 @@ div {
     color: white;
     height: $headerHeight;
     margin: 0 0 0 15px;
+    -ms-flex-item-align: center;
     align-self: center;
     line-height: $headerHeight;
 }
@@ -306,7 +422,9 @@ div {
 #bellIcon {
     margin-right: 15px;
     @include icon;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-transition-duration: 0.25s;
     transition-duration: 0.25s;
 }
 
@@ -324,6 +442,7 @@ div {
     border-radius: 50%;
     margin-left: 20px;
     @include icon;
+    -ms-flex-item-align: center;
     align-self: center;
     @include hideOnBigScreens;
 }
@@ -332,6 +451,7 @@ div {
     color: white;
     display: inline-block;
     margin: 0;
+    -ms-flex-item-align: center;
     align-self: center;
     margin-left: 10px;
     margin-right: 10px;
@@ -341,6 +461,8 @@ div {
 .moveToRight {
     margin-left: auto;
     margin-right: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -387,8 +509,30 @@ div {
 }
 
 .notificationExitButton:hover {
+    -webkit-transform: scale(1.12);
     transform: scale(1.12);
+    -webkit-transition-duration: 0.25s;
     transition-duration: 0.25s;
+}
+
+@mixin settingsButton {
+    width: 45%;
+    color: white;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 120%;
+}
+
+#saveSettings {
+    background: #7377BF;
+    @include settingsButton;
+}
+
+#cancelSettings {
+    background: #B2B2B2;
+    @include settingsButton;
 }
 
 #dashboardContent {
@@ -399,7 +543,7 @@ div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto auto auto;
-    padding: 0;
+    padding: 0 10px 0 0;
 }
 
 #mainDashboardTitle {
@@ -411,7 +555,9 @@ div {
 
 .dashboardTitle {
     color: #6E6D6D;
-    font-size: 130%;
+    font-size: 115%;
+    margin-left: 5px;
+    margin-bottom: 20px;
 }
 
 .search-container {
@@ -434,20 +580,24 @@ input#search-bar {
 
     &:focus {
         border: 1px solid #008ABF;
+        -webkit-transition: 0.35s ease;
         transition: 0.35s ease;
         color: #008ABF;
 
         &::-webkit-input-placeholder {
+            -webkit-transition: opacity 0.45s ease;
             transition: opacity 0.45s ease;
             opacity: 0;
         }
 
         &::-moz-placeholder {
+            -webkit-transition: opacity 0.45s ease;
             transition: opacity 0.45s ease;
             opacity: 0;
         }
 
         &:-ms-placeholder {
+            -webkit-transition: opacity 0.45s ease;
             transition: opacity 0.45s ease;
             opacity: 0;
         }
@@ -486,8 +636,9 @@ input#search-bar {
 #dashboardSections {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    // background: red;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-column-start: 1;
+    grid-column-end: 7;
 }
 
 #trafficChartContainer {
@@ -559,12 +710,14 @@ input#search-bar {
     background: none;
     outline: none;
     border: none;
+    -webkit-transition-duration: 0.25s;
     transition-duration: 0.25s;
     line-height: 21px;
     font-size: 18px;
 }
 
 .alertExit:hover {
+    -webkit-transform: scale(1.3);
     transform: scale(1.3);
 }
 
@@ -591,10 +744,16 @@ input#search-bar {
     width: 90%;
     padding: 10px;
     outline: none;
-    border: 2px solid lightgrey;
+    border: 1.5px solid lightgrey;
     border-radius: 5px;
+    -webkit-transition-duration: 300ms;
     transition-duration: 300ms;
     background: rgb(240,240,240);
+    color: black;
+}
+
+#searchForUser::-webkit-input-placeholder {
+    color: rgb(150,150,150);
 }
 
 #messageForUser {
@@ -605,16 +764,17 @@ input#search-bar {
 
 #sendMessage {
     background: #7377BF;
-    width: 90%;
+    width: calc(90% + 20px);
     outline: none;
     color: white;
     border-radius: 5px;
-    padding:10px;
-    margin-top:10px;
+    padding: 15px;
+    margin-top: 10px;
 }
 
 #dashboardSections > div {
     border: 1px solid rgb(215,215,215);
+    padding: 20px;
 }
 
 #messageForUser:focus,
@@ -639,6 +799,8 @@ input#search-bar {
     }
 
     #header {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 

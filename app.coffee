@@ -161,9 +161,7 @@ $("#sendMessage").click(->
 
 
 
-$("#sendEmailNotifications").change(->
-    localStorage.setItem('sendEmailNotifications', this.checked)
-    )
-$("#setProfileToPublic").change(->
-    localStorage.setItem('setProfileToPublic', this.checked)
+$("#saveSettings").click((event)->
+    localStorage.setItem('sendEmailNotifications', $("#sendEmailNotifications").prop('checked'))
+    localStorage.setItem('setProfileToPublic',  $("#setProfileToPublic").prop('checked'))
     )

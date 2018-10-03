@@ -146,10 +146,7 @@ $("#sendMessage").click(function() {
   }
 });
 
-$("#sendEmailNotifications").change(function() {
-  return localStorage.setItem('sendEmailNotifications', this.checked);
-});
-
-$("#setProfileToPublic").change(function() {
-  return localStorage.setItem('setProfileToPublic', this.checked);
+$("#saveSettings").click(function(event) {
+  localStorage.setItem('sendEmailNotifications', $("#sendEmailNotifications").prop('checked'));
+  return localStorage.setItem('setProfileToPublic', $("#setProfileToPublic").prop('checked'));
 });
