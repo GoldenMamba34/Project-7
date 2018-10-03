@@ -274,22 +274,6 @@ ul li:before {
     margin-right: 10px;
 }
 
-code {
-    font-size: 16px;
-    padding: 3px 7px;
-    border: 1px dotted #026083;
-    border-radius: 2px;
-    color: #026083;
-    -webkit-box-shadow: inset 0 0 0 1px white;
-    box-shadow: inset 0 0 0 1px white;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    cursor: default;
-}
-
 #sideNav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -522,26 +506,71 @@ div {
     transition-duration: 0.25s;
 }
 
+#settingsButtons {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 30px;
+}
+
 #saveSettings {
-    background: #7377BF;
-    width: 45%;
+    width: calc(50% - 10px);
     color: white;
-    padding: 20px;
+    padding: 15px;
     outline: none;
     border: none;
     border-radius: 5px;
-    font-size: 120%;
+    font-size: 125%;
+    -webkit-transition-duration: 225ms;
+    transition-duration: 225ms;
+    background: #7377BF;
+}
+
+#saveSettings:hover {
+    background: #40448c;
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 #cancelSettings {
-    background: #B2B2B2;
-    width: 45%;
+    width: calc(50% - 10px);
     color: white;
-    padding: 20px;
+    padding: 15px;
     outline: none;
     border: none;
     border-radius: 5px;
-    font-size: 120%;
+    font-size: 125%;
+    -webkit-transition-duration: 225ms;
+    transition-duration: 225ms;
+    background: #B2B2B2;
+}
+
+#cancelSettings:hover {
+    background: #7f7f7f;
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+#timeZoneSelect {
+    height: 3rem;
+    outline: none;
+    background: #FBFBFB;
+    border: 1px solid #dbe2e8;
+    color: #a0a0a0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("https://png.icons8.com/color/21/3498db/expand-arrow.png") no-repeat 97% center !important;
+    padding: 10px;
+}
+
+#timeZoneSelect:focus {
+    border-color: #02b3e4;
 }
 
 #dashboardContent {
@@ -746,16 +775,20 @@ input#search-bar:focus:-ms-placeholder {
     width: 90%;
     padding: 10px;
     outline: none;
-    border: 1.5px solid lightgrey;
+    border: 1px solid #dbe2e8;
     border-radius: 5px;
     -webkit-transition-duration: 300ms;
     transition-duration: 300ms;
-    background: #f0f0f0;
+    background: #FBFBFB;
     color: black;
 }
 
+#searchForUser:focus, #messageForUser:focus {
+    border-color: #02b3e4;
+}
+
 #searchForUser::-webkit-input-placeholder, #messageForUser::-webkit-input-placeholder {
-    color: #969696;
+    color: #D8D8D8;
 }
 
 #messageForUser {
@@ -778,9 +811,7 @@ input#search-bar:focus:-ms-placeholder {
     padding: 20px;
 }
 
-#messageForUser:focus,
-#searchForUser:focus,
-#messageForUser:focus {
+#messageForUser:focus, #searchForUser:focus, #messageForUser:focus {
     background: white;
 }
 
