@@ -465,7 +465,6 @@ input#search-bar {
 
 .alert {
     width: 90%;
-    margin-left: 2.5%;
     background-color: #7377BF;
     color: white;
     border-radius: 5px;
@@ -476,7 +475,6 @@ input#search-bar {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 6;
-    background: black;
 }
 
 .alert p {
@@ -489,7 +487,7 @@ input#search-bar {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    background: red;
+    // background: red;
 }
 
 #trafficChartContainer {
@@ -497,7 +495,7 @@ input#search-bar {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
-    background: orange;
+    // background: orange;
 }
 
 #dailyTrafficChartContainer {
@@ -505,7 +503,7 @@ input#search-bar {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
-    background: yellow;
+    // background: yellow;
 }
 
 #mobileUsersChartContainer {
@@ -513,7 +511,7 @@ input#search-bar {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
-    background: green;
+    // background: green;
 }
 
 #socialStats {
@@ -521,7 +519,7 @@ input#search-bar {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3;
-    background: blue;
+    // background: blue;
 }
 
 #newMembers {
@@ -529,7 +527,7 @@ input#search-bar {
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-    background: purple;
+    // background: purple;
 }
 
 #recentActivity {
@@ -537,7 +535,7 @@ input#search-bar {
     grid-row-end: 5;
     grid-column-start: 2;
     grid-column-end: 3;
-    background: rgb(132,103,254);
+    // background: rgb(132,103,254);
 }
 
 #messageUser {
@@ -545,7 +543,6 @@ input#search-bar {
     grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 2;
-    background: rgb(0, 232, 255);
 }
 
 #settings {
@@ -553,7 +550,7 @@ input#search-bar {
     grid-row-end: 6;
     grid-column-start: 2;
     grid-column-end: 3;
-    background: rgb(60,60,30);
+    // background: rgb(60,60,30);
 }
 
 .alertExit {
@@ -572,11 +569,57 @@ input#search-bar {
 }
 
 .socialStatCard {
-    background: #FBFBFB;
+    background: rgb(240,240,240);
+    width: 30%;
+    margin: 10px;
 }
 
-#socialStats {
-    display: flex;
+.socialStatCard svg {
+    width: 50px;
+    height: 50px;
+}
+
+.socialStatTitle {
+    color: #8B8EC9;
+}
+
+.socialStatNumber {
+    color: #BABABA;
+}
+
+#searchForUser {
+    width: 90%;
+    padding: 10px;
+    outline: none;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    transition-duration: 300ms;
+    background: rgb(240,240,240);
+}
+
+#messageForUser {
+    @extend #searchForUser;
+    resize: none;
+    margin-top: 20px;
+}
+
+#sendMessage {
+    background: #7377BF;
+    width: 90%;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    padding:10px;
+    margin-top:10px;
+}
+
+#dashboardSections > div {
+    border: 1px solid rgb(215,215,215);
+}
+
+#messageForUser:focus,
+#searchForUser:focus {
+    background: white;
 }
 
 #dashboardHeader {
@@ -584,7 +627,6 @@ input#search-bar {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 6;
-    // background: black;
 }
 @media (min-width:320px) {
     #sideBar {

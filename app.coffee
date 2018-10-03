@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 sideBar = $("#sideBar")
 sideBarItems = $(".sideBarLink")
 $("#navButton").click(->
@@ -69,7 +79,18 @@ chart = new Chart(ctx,
                 2500
             ]
         } ]
-    options: {responsive:true})
+
+    options: {
+        responsive:true
+        scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 50,
+                    suggestedMax: 100
+                }
+            }]
+        }
+    })
 
 
 
@@ -126,3 +147,21 @@ chart = new Chart(ctx,
         } ]
 
     options: {responsive:true})
+
+
+$("#sendMessage").click(->
+    if $("#searchForUser").val() is "" or $("#messageForUser").val() is ""
+        alert("Please don't leave the message blank")
+        undefined
+    else
+        alert("Message sent")
+    )
+
+
+
+$("sendEmailNotifications").change(->
+    localStorage.setItem('sendEmailNotifications', this.checked)
+    )
+$("setProfileToPublic").change(->
+    localStorage.setItem('setProfileToPublic', this.checked)
+    )

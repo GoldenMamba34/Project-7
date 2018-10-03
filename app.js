@@ -71,7 +71,17 @@ chart = new Chart(ctx, {
     ]
   },
   options: {
-    responsive: true
+    responsive: true,
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            suggestedMin: 50,
+            suggestedMax: 100
+          }
+        }
+      ]
+    }
   }
 });
 
@@ -121,4 +131,21 @@ chart = new Chart(ctx, {
   options: {
     responsive: true
   }
+});
+
+$("#sendMessage").click(function() {
+  if ($("#searchForUser").val() === "" || $("#messageForUser").val() === "") {
+    alert("Please don't leave the message blank");
+    return void 0;
+  } else {
+    return alert("Message sent");
+  }
+});
+
+$("sendEmailNotifications").change(function() {
+  return localStorage.setItem('sendEmailNotifications', this.checked);
+});
+
+$("setProfileToPublic").change(function() {
+  return localStorage.setItem('setProfileToPublic', this.checked);
 });
