@@ -6,6 +6,7 @@ body,
 html {
     max-width: 100%;
     overflow-x: hidden;
+    position: relative;
 }
 
 input.iosSwitch {
@@ -326,7 +327,7 @@ div {
     grid-column-start: 1;
     grid-column-end: 2;
     width: 5vw;
-    height: calc(100vh - 8vh - 10px);
+    height: 100%;
     background-color: #41468a;
 }
 
@@ -573,6 +574,10 @@ div {
     border-color: #02b3e4;
 }
 
+#settings label {
+    font-size: 120%;
+}
+
 #dashboardContent {
     grid-row-start: 3;
     grid-column-start: 2;
@@ -653,6 +658,7 @@ input#search-bar:focus:-ms-placeholder {
 
 .alert {
     width: 90%;
+    margin-left: calc(5% - 20px);
     background-color: #7377BF;
     color: white;
     border-radius: 5px;
@@ -677,6 +683,7 @@ input#search-bar:focus:-ms-placeholder {
     grid-template-rows: auto auto auto auto auto auto;
     grid-column-start: 1;
     grid-column-end: 7;
+    padding: 0;
 }
 
 #trafficChartContainer {

@@ -279,11 +279,15 @@
                     <div id="settings">
 
                         <h2 class="dashboardTitle">Settings</h2>
-                        <label for="sendEmailNotifications">Send Email Notifications</label>
-                        <input type="checkbox" class="iosSwitch" id="sendEmailNotifications"/>
-                        <br>
-                        <label for="setProfileToPublic">Set Profile To Public</label>
-                        <input type="checkbox" class="iosSwitch" id="setProfileToPublic"/>
+
+                        <div id="onOrOffSettings">
+                            <label for="sendEmailNotifications">Send Email Notifications</label>
+                            <input type="checkbox" class="iosSwitch" id="sendEmailNotifications"/>
+                            <br>
+                            <label for="setProfileToPublic">Set Profile To Public</label>
+                            <input type="checkbox" class="iosSwitch" id="setProfileToPublic"/>
+                        </div>
+
                         <select id="timeZoneSelect">
                             <option value="">Select Timezone</option>
                             <option timezoneid="1" gmtadjustment="GMT-12:00" usedaylighttime="0" value="-12">(GMT-12:00) International Date Line West</option>
@@ -371,7 +375,7 @@
                         </select>
                         <div id="settingsButtons">
                             <button type="button" id="saveSettings">SAVE</button>
-                            <button type="button" id="cancelSettings">CANCLE</button>
+                            <button type="button" id="cancelSettings">CANCEL</button>
 
                         </div>
                     </div>

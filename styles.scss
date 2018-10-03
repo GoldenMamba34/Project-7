@@ -31,6 +31,7 @@ body,
 html {
     max-width: 100%;
     overflow-x: hidden;
+    position: relative;
 }
 
 input.iosSwitch {
@@ -368,7 +369,7 @@ div {
     grid-column-start: 1;
     grid-column-end: 2;
     width: $sideBarWidth;
-    height: calc(100vh - #{$headerHeight} - #{$divPadding});
+    height: 100%;
     background-color: unquote(map-get($colors, "nav"));
 }
 
@@ -507,13 +508,13 @@ div {
     border-radius: 5px;
     font-size: 125%;
     -webkit-transition-duration: 225ms;
-            transition-duration: 225ms;
+    transition-duration: 225ms;
     background: $backgroundColor;
 
     &:hover {
         background: darken($backgroundColor,20);
         -webkit-transform: scale(1.02);
-                transform: scale(1.02);
+        transform: scale(1.02);
     }
 }
 
@@ -523,8 +524,8 @@ div {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 0;
     margin-top: 30px;
 }
@@ -548,15 +549,21 @@ div {
         border-color: #02b3e4;
     }
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background: url("https://png.icons8.com/color/21/3498db/expand-arrow.png") no-repeat 97% center !important;
     padding: 10px;
 }
 
 #settings label {
-    
+    font-size: 120%;
 }
+
+#onOrOffSettings {
+}
+
+.iosSwitch {}
+
 #dashboardContent {
     grid-row-start: 3;
     grid-column-start: 2;
@@ -637,6 +644,7 @@ input#search-bar {
 
 .alert {
     width: 90%;
+    margin-left: calc(5% - 20px);
     background-color: #7377BF;
     color: white;
     border-radius: 5px;
@@ -661,6 +669,7 @@ input#search-bar {
     grid-template-rows: auto auto auto auto auto auto;
     grid-column-start: 1;
     grid-column-end: 7;
+    padding: 0;
 }
 
 #trafficChartContainer {

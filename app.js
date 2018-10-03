@@ -150,3 +150,7 @@ $("#saveSettings").click(function(event) {
   localStorage.setItem('sendEmailNotifications', $("#sendEmailNotifications").prop('checked'));
   return localStorage.setItem('setProfileToPublic', $("#setProfileToPublic").prop('checked'));
 });
+
+$(".alertExit").click(function() {
+  return $(".alert").slideUp();
+});
