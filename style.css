@@ -578,6 +578,15 @@ div {
     font-size: 120%;
 }
 
+.iosSwitch {
+    float: right;
+}
+
+#sendEmailNotificationsContainer,
+#setProfileToPublicContainer {
+    margin-bottom: 10px;
+}
+
 #dashboardContent {
     grid-row-start: 3;
     grid-column-start: 2;
@@ -587,13 +596,18 @@ div {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto auto auto;
     padding: 0 10px 0 0;
+    background: #fbfbfb;
 }
 
 #mainDashboardTitle {
+    margin: 0;
     color: #6E6D6D;
-    margin: 20px;
+    padding: 20px;
+    background: red;
     display: inline-block;
     width: 10%;
+    background: white;
+    border: 1px solid gainsboro;
 }
 
 .dashboardTitle {
@@ -684,6 +698,7 @@ input#search-bar:focus:-ms-placeholder {
     grid-column-start: 1;
     grid-column-end: 7;
     padding: 0;
+    background: white;
 }
 
 #trafficChartContainer {

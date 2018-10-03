@@ -157,6 +157,8 @@ $("#sendMessage").click(->
         undefined
     else
         alert("Message sent")
+        $("#searchForUser").val("")
+        $("#messageForUser").val("")
     )
 
 

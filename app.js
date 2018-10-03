@@ -142,7 +142,9 @@ $("#sendMessage").click(function() {
     alert("Please don't leave the message blank");
     return void 0;
   } else {
-    return alert("Message sent");
+    alert("Message sent");
+    $("#searchForUser").val("");
+    return $("#messageForUser").val("");
   }
 });
 
