@@ -322,6 +322,21 @@ div {
     padding: 10px;
 }
 
+#newMembers {
+    display: flex;
+    flex-direction: column;
+}
+
+.newMemberName {
+    display: inline-block;
+}
+
+.newMemberIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
 #sideBar {
     grid-row-start: 3;
     grid-column-start: 1;
@@ -596,18 +611,13 @@ div {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto auto auto;
     padding: 0 10px 0 0;
-    background: #fbfbfb;
 }
 
 #mainDashboardTitle {
-    margin: 0;
     color: #6E6D6D;
-    padding: 20px;
-    background: red;
+    margin: 20px;
     display: inline-block;
     width: 10%;
-    background: white;
-    border: 1px solid gainsboro;
 }
 
 .dashboardTitle {
@@ -683,6 +693,7 @@ input#search-bar:focus:-ms-placeholder {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 6;
+    margin-top: -50px;
 }
 
 .alert p {
@@ -698,7 +709,6 @@ input#search-bar:focus:-ms-placeholder {
     grid-column-start: 1;
     grid-column-end: 7;
     padding: 0;
-    background: white;
 }
 
 #trafficChartContainer {
@@ -706,6 +716,7 @@ input#search-bar:focus:-ms-placeholder {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
+    margin-top: 20px;
 }
 
 #dailyTrafficChartContainer {
@@ -776,8 +787,10 @@ input#search-bar:focus:-ms-placeholder {
 
 .socialStatCard {
     background: #f0f0f0;
+    border: 1px solid #DCDCDC;
     width: 30%;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .socialStatCard svg {
@@ -787,10 +800,18 @@ input#search-bar:focus:-ms-placeholder {
 
 .socialStatTitle {
     color: #8B8EC9;
+    display: inline-block;
 }
 
 .socialStatNumber {
-    color: #BABABA;
+    color: #6E6E6E;
+    font-size: 200%;
+    font-weight: 200;
+}
+
+#socialStatsCards {
+    display: flex;
+    justify-content: space-between;
 }
 
 #searchForUser, #messageForUser {
@@ -878,6 +899,7 @@ input#search-bar:focus:-ms-placeholder {
         width: 80%;
         padding-right: 10%;
         font-size: 90%;
+        z-index: 1;
     }
 }
 

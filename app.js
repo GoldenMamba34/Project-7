@@ -26,7 +26,7 @@ $(".sideBarLink").click(function() {
 
 $("#bellIcon").click(function() {
   $("#notifications").css("position", "absolute");
-  $("#notifications").css("top", $("header").position().top + $("#header").height() + 20);
+  $("#notifications").css("top", $("#header").height() + 20);
   if ($(document).width() > 768) {
     $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2 - $(document).width() * .1);
   } else if ($(document).width() > 568) {
@@ -48,6 +48,7 @@ $(".notificationExitButton").click(function(event) {
   if (".notification:hidden".length === $(".notification").length - 1) {
     $("#bellIcon").off();
   }
+  new Audio('notification.wav').play();
   return void 0;
 });
 
@@ -154,5 +155,9 @@ $("#saveSettings").click(function(event) {
 });
 
 $(".alertExit").click(function() {
-  return $(".alert").slideUp();
+  $(".alert").animate({
+    opacity: '0.0',
+    width: '0'
+  }, 400);
+  return new Audio('notification.wav').play();
 });

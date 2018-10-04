@@ -25,7 +25,7 @@ $(".sideBarLink").click(->
 $("#bellIcon").click(->
 
     $("#notifications").css("position","absolute")
-    $("#notifications").css("top",$("header").position().top + $("#header").height() + 20 )
+    $("#notifications").css("top",$("#header").height() + 20 )
     if $(document).width() > 768
         $("#notifications").css("left", $("#bellIcon").position().left - $("#notifications").width() / 2 - $(document).width() * .1)
     else if $(document).width() > 568
@@ -41,6 +41,7 @@ $(".notificationExitButton").click((event) ->
     $(event.target).parent().slideUp(250)
     $("#greenAlertCircle").hide(150) if $(".notification:hidden").length is $(".notification").length - 1
     $("#bellIcon").off() if (".notification:hidden").length is $(".notification").length - 1
+    new Audio('notification.wav').play();
     undefined
     )
 
@@ -168,5 +169,10 @@ $("#saveSettings").click((event)->
     localStorage.setItem('setProfileToPublic',  $("#setProfileToPublic").prop('checked'))
     )
 $(".alertExit").click(->
-    $(".alert").slideUp()
+    $(".alert").animate({
+            opacity: '0.0',
+            width: '0',
+        }, 400)
+    new Audio('notification.wav').play();
+
     )
