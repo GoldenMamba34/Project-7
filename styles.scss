@@ -374,6 +374,7 @@ div {
     width:100%;
     justify-content: space-between;
     flex-direction:row;
+    align-items:center;
 }
 .newMemberName {
     display: inline-block;
@@ -383,14 +384,14 @@ div {
 .newMemberEmail {
     color:#7477BF;
     text-decoration:none;
+
 }
 .newMemberInformation {
     display: inline-block;
     display: inline-flex;
     flex-direction: column;
     width: 50%;
-    background:blue;
-align-self:start;
+margin-right:auto;
 }
 
 .newMemberIcon {
@@ -401,6 +402,8 @@ align-self:start;
 .newMemberDate {
     float: right;
     color: #C0C0C0;
+    padding-right: 10px;
+
 }
 
 .social-svg-container {
@@ -469,7 +472,12 @@ align-self:start;
     border: none;
     @include hideOnBigScreens;
 }
-
+hr {
+    width:100%;
+    height:2px;
+    border:none;
+    background:rgb(200,200,200);
+}
 #profile-image {
     border-radius: 50%;
     margin-left: 20px;
@@ -746,7 +754,6 @@ input#search-bar {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
-    // background: green;
 }
 
 #socialStats {
@@ -754,7 +761,6 @@ input#search-bar {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3;
-    // background: blue;
 }
 
 #newMembers {
@@ -762,7 +768,6 @@ input#search-bar {
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-    // background: purple;
 }
 
 #recentActivity {
@@ -770,8 +775,9 @@ input#search-bar {
     grid-row-end: 5;
     grid-column-start: 2;
     grid-column-end: 3;
-    // background: rgb(132,103,254);
 }
+
+
 
 #messageUser {
     grid-row-start: 5;
@@ -785,7 +791,6 @@ input#search-bar {
     grid-row-end: 6;
     grid-column-start: 2;
     grid-column-end: 3;
-    // background: rgb(60,60,30);
 }
 
 .alertExit {
