@@ -54,6 +54,7 @@ $(".notificationExitButton").click(function(event) {
 
 Chart.defaults.global.title.display = false;
 
+// Chart.defaults.global.legend.display = false
 Chart.defaults.global.legend.position = "right";
 
 ctx = document.getElementById('trafficChart').getContext('2d');
@@ -64,9 +65,10 @@ chart = new Chart(ctx, {
     labels: ['16-22', '23-29', '30-36', '37-43', '44-50', '51-57', '58-64', '65-71', '72-78', '79-85', '86-92', '93-99'],
     datasets: [
       {
-        label: 'My First dataset',
+        label: 'Traffic',
         backgroundColor: 'rgba(226, 227, 246, .75)',
         borderColor: '#005ebc',
+        fontColor: 'rgb(150,150,150)',
         data: [500,
       1000,
       1500,
@@ -81,11 +83,14 @@ chart = new Chart(ctx, {
       yAxes: [
         {
           ticks: {
-            suggestedMin: 50,
-            suggestedMax: 100
+            suggestedMin: 1,
+            suggestedMax: 10
           }
         }
       ]
+    },
+    legend: {
+      display: false
     }
   }
 });
@@ -98,21 +103,36 @@ chart = new Chart(ctx, {
     labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     datasets: [
       {
-        label: 'My First dataset',
+        label: 'Daily Traffic',
         backgroundColor: '#7377BF',
         borderColor: '#7377BF',
-        data: [500,
-      1000,
-      1500,
-      2000,
-      2500]
+        data: [50,
+      100,
+      150,
+      200,
+      250]
       }
     ]
   },
   options: {
-    responsive: true
+    responsive: true,
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            suggestedMin: 5,
+            suggestedMax: 10
+          }
+        }
+      ]
+    },
+    legend: {
+      display: false
+    }
   }
 });
+
+ctx.height = 500;
 
 ctx = document.getElementById('mobileUsersChart').getContext('2d');
 
@@ -122,7 +142,7 @@ chart = new Chart(ctx, {
     labels: ['Phones', 'Tablets', 'Desktop'],
     datasets: [
       {
-        label: 'My First dataset',
+        label: 'Mobile Users',
         backgroundColor: ['#81C98F',
       '#74B1BF',
       '#005ebc'],
@@ -131,10 +151,23 @@ chart = new Chart(ctx, {
       27,
       65]
       }
-    ]
-  },
-  options: {
-    responsive: true
+    ],
+    options: {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              suggestedMin: 50,
+              suggestedMax: 100
+            }
+          }
+        ]
+      },
+      legend: {
+        display: true
+      }
+    }
   }
 });
 

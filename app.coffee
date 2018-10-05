@@ -46,6 +46,7 @@ $(".notificationExitButton").click((event) ->
     )
 
 Chart.defaults.global.title.display = false
+# Chart.defaults.global.legend.display = false
 Chart.defaults.global.legend.position = "right"
 
 
@@ -70,10 +71,10 @@ chart = new Chart(ctx,
             '93-99'
         ]
         datasets: [ {
-            label: 'My First dataset'
+            label: 'Traffic'
             backgroundColor: 'rgba(226, 227, 246, .75)'
             borderColor: '#005ebc'
-
+            fontColor: 'rgb(150,150,150)'
             data: [
                 500
                 1000
@@ -88,10 +89,13 @@ chart = new Chart(ctx,
         scales: {
             yAxes: [{
                 ticks: {
-                    suggestedMin: 50,
-                    suggestedMax: 100
+                    suggestedMin: 1,
+                    suggestedMax: 10
                 }
             }]
+        }
+       legend: {
+            display: false
         }
     })
 
@@ -110,19 +114,32 @@ chart = new Chart(ctx,
             'F'
             'S' ]
         datasets: [ {
-            label: 'My First dataset'
+            label: 'Daily Traffic'
             backgroundColor: '#7377BF'
             borderColor: '#7377BF'
             data: [
-                500
-                1000
-                1500
-                2000
-                2500
+                50
+                100
+                150
+                200
+                250
             ]
         } ]
-    options: {responsive:true})
-
+    options: {
+        responsive:true
+        scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 5,
+                    suggestedMax: 10
+                }
+            }]
+        }
+       legend: {
+            display: false
+        }
+    })
+ctx.height = 500;
 
 ctx = document.getElementById('mobileUsersChart').getContext('2d')
 chart = new Chart(ctx,
@@ -135,7 +152,7 @@ chart = new Chart(ctx,
 
         ]
         datasets: [ {
-            label: 'My First dataset'
+            label: 'Mobile Users'
             backgroundColor: [
                 '#81C98F'
                 '#74B1BF'
@@ -149,7 +166,21 @@ chart = new Chart(ctx,
             ]
         } ]
 
-    options: {responsive:true})
+        options: {
+            responsive:true
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 50,
+                        suggestedMax: 100
+                    }
+                }]
+            }
+           legend: {
+                display: true,
+            }
+        })
+
 
 
 $("#sendMessage").click(->

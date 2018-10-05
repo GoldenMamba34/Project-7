@@ -371,11 +371,17 @@ div {
 
 .newMemberName {
     display: inline-block;
+    margin: 0;
 }
 
 .newMemberIcon {
     @include setWidthAndHeight(50px,50px);
     border-radius: 50%;
+}
+
+.newMemberDate {
+    float: right;
+    color: #C0C0C0;
 }
 
 #sideBar {
@@ -777,7 +783,7 @@ input#search-bar {
     border: 1px solid #DCDCDC;
     width: 30%;
     margin: 10px;
-    border-radius:5px;
+    border-radius: 5px;
 }
 
 .socialStatCard svg {
@@ -787,18 +793,20 @@ input#search-bar {
 
 .socialStatTitle {
     color: #8B8EC9;
-display: inline-block;
+    display: inline-block;
 }
 
 .socialStatNumber {
     color: #6E6E6E;
-    font-size:200%;
-    font-weight:200;
+    font-size: 200%;
+    font-weight: 200;
 }
+
 #socialStatsCards {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
+
 #searchForUser {
     width: 90%;
     padding: 10px;
