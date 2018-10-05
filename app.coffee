@@ -5,6 +5,7 @@
 
 
 
+
 $("#sendEmailNotifications").prop('checked', localStorage.getItem('sendEmailNotifications') is "true")
 
 $("#setProfileToPublic").prop('checked', localStorage.getItem('setProfileToPublic') is "true")
@@ -205,5 +206,4 @@ $(".alertExit").click(->
             width: '0',
         }, 400)
     new Audio('notification.wav').play();
-
     )
