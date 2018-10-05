@@ -327,9 +327,31 @@ div {
     flex-direction: column;
 }
 
+.newMember {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 .newMemberName {
     display: inline-block;
     margin: 0;
+    color: grey;
+}
+
+.newMemberEmail {
+    color: #7477BF;
+    text-decoration: none;
+}
+
+.newMemberInformation {
+    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    width: 50%;
+    background: blue;
+    align-self: start;
 }
 
 .newMemberIcon {
