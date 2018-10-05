@@ -827,7 +827,9 @@ input#search-bar {
     display: flex;
     flex-direction: column;
     float: right;
-    margin-right: 10%;
+    margin-right: calc(50% - 101px);
+    width: 50%;
+    align-items: center;
 }
 
 #socialStatsCards {
