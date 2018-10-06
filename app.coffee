@@ -201,9 +201,6 @@ $("#saveSettings").click((event)->
     localStorage.setItem('setProfileToPublic',  $("#setProfileToPublic").prop('checked'))
     )
 $(".alertExit").click(->
-    $(".alert").animate({
-            opacity: '0.0',
-            width: '0',
-        }, 400)
+    $(".alert").slideUp(250)
     new Audio('notification.wav').play();
     )

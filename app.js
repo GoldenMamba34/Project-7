@@ -188,9 +188,6 @@ $("#saveSettings").click(function(event) {
 });
 
 $(".alertExit").click(function() {
-  $(".alert").animate({
-    opacity: '0.0',
-    width: '0'
-  }, 400);
+  $(".alert").slideUp(250);
   return new Audio('notification.wav').play();
 });

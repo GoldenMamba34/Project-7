@@ -961,14 +961,14 @@ input#search-bar:focus:-ms-placeholder {
 @media (min-width: 320px) {
     .search-container {
         display: inline-block;
-        width: calc(90% - 75px);
-        margin: 0 0 0 calc(5% + 10px);
+        width: calc(97vw - 105px);
+        margin: 0 calc(1.5vw + 71px) 0 calc(1.5vw + 33.5px);
         position: static;
     }
     #mainDashboardTitle {
-        width: 100%;
-        text-align: center;
+        width: 100vw;
         margin: 20px 0;
+        text-align: center;
     }
     #dashboardContent {
         grid-column-start: 1;
@@ -1014,11 +1014,11 @@ input#search-bar:focus:-ms-placeholder {
         padding-right: 0;
     }
     .alert {
-        width: calc(90% - 56.5px);
+        width: calc(90vw - 30px);
         height: unset;
         overflow: auto;
-        padding-bottom: 17px;
-        margin-left: calc(5% + 10px);
+        display: inline-block;
+        margin: -50px 5vw 0 5vw;
     }
 }
 
