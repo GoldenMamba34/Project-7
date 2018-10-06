@@ -17,7 +17,6 @@ $sideBarWidth: 5vw;
     @media (min-width:768px) {
         display: inline-block;
     }
-
 }
 // body and everything
 
@@ -861,7 +860,6 @@ input#search-bar {
     grid-column-start: 2;
     -ms-grid-column-span: 1;
     grid-column-end: 3;
-
 }
 
 .recentActivityIcon {
@@ -1067,13 +1065,22 @@ input#search-bar {
 }
 @media (min-width:320px) {
     .search-container {
-    display: block;
-    width:90%;
-    position: static;
+        display: inline-block;
+        width: calc(90% - 75px);
+        margin: 0 0 0 calc(5% + 10px);
+        position: static;
+    }
 
+    #mainDashboardTitle {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
 
+    #dashboardContent {
+        grid-column-start: 1;
+    }
 
-}
     #sideBar {
         display: none;
     }
@@ -1129,7 +1136,6 @@ input#search-bar {
     }
 }
 @media (min-width:768px) {
-
     #sideBar {
         display: block;
     }
@@ -1167,9 +1173,7 @@ input#search-bar {
     }
 }
 @media (min-width:1024px) {
-    .alert {
-
-    }
+    .alert {}
 
     #sideBar {
         display: block;

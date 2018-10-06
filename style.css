@@ -1060,9 +1060,19 @@ input#search-bar:focus:-ms-placeholder {
 
 @media (min-width: 320px) {
     .search-container {
-        display: block;
-        width: 90%;
+        display: inline-block;
+        width: calc(90% - 75px);
+        margin: 0;
+        margin-left: calc(5% + 10px);
         position: static;
+    }
+    #mainDashboardTitle {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+    }
+    #dashboardContent {
+        grid-column-start: 1;
     }
     #sideBar {
         display: none;
