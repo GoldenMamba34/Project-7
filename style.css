@@ -789,87 +789,6 @@ input#search-bar:focus:-ms-placeholder {
     line-height: 21px;
 }
 
-#dashboardSections {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% 50%;
-    grid-template-columns: 50% 50%;
-    -ms-grid-rows: auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 6;
-    grid-column-end: 7;
-    padding: 0;
-}
-
-#trafficChartContainer {
-    -ms-grid-row: 1;
-    grid-row-start: 1;
-    -ms-grid-row-span: 1;
-    grid-row-end: 2;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 2;
-    grid-column-end: 3;
-    margin-top: 20px;
-}
-
-#dailyTrafficChartContainer {
-    -ms-grid-row: 2;
-    grid-row-start: 2;
-    -ms-grid-row-span: 1;
-    grid-row-end: 3;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 1;
-    grid-column-end: 2;
-}
-
-#mobileUsersChartContainer {
-    -ms-grid-row: 2;
-    grid-row-start: 2;
-    -ms-grid-row-span: 1;
-    grid-row-end: 3;
-    -ms-grid-column: 2;
-    grid-column-start: 2;
-    -ms-grid-column-span: 1;
-    grid-column-end: 3;
-}
-
-#socialStats {
-    -ms-grid-row: 3;
-    grid-row-start: 3;
-    -ms-grid-row-span: 1;
-    grid-row-end: 4;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 2;
-    grid-column-end: 3;
-}
-
-#newMembers {
-    -ms-grid-row: 4;
-    grid-row-start: 4;
-    -ms-grid-row-span: 1;
-    grid-row-end: 5;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 1;
-    grid-column-end: 2;
-}
-
-#recentActivity {
-    -ms-grid-row: 4;
-    grid-row-start: 4;
-    -ms-grid-row-span: 1;
-    grid-row-end: 5;
-    -ms-grid-column: 2;
-    grid-column-start: 2;
-    -ms-grid-column-span: 1;
-    grid-column-end: 3;
-}
-
 .recentActivityInformation {
     width: 80%;
 }
@@ -896,28 +815,6 @@ input#search-bar:focus:-ms-placeholder {
     -webkit-transform: scale(1.2) rotate(-90deg);
     -ms-transform: scale(1.2) rotate(-90deg);
     transform: scale(1.2) rotate(-90deg);
-}
-
-#messageUser {
-    -ms-grid-row: 5;
-    grid-row-start: 5;
-    -ms-grid-row-span: 1;
-    grid-row-end: 6;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 1;
-    grid-column-end: 2;
-}
-
-#settings {
-    -ms-grid-row: 5;
-    grid-row-start: 5;
-    -ms-grid-row-span: 1;
-    grid-row-end: 6;
-    -ms-grid-column: 2;
-    grid-column-start: 2;
-    -ms-grid-column-span: 1;
-    grid-column-end: 3;
 }
 
 .alertExit {
@@ -1147,6 +1044,30 @@ input#search-bar:focus:-ms-placeholder {
         position: relative;
         left: calc(100% - (50% + 90px));
     }
+    .socialStatCard {
+        width: 33%;
+    }
+    #socialStatsCards {
+        width: calc(100% - 20px);
+    }
+    #dashboardSections > div {
+        padding: 10px;
+    }
+    .social-svg-container {
+        width: 40px;
+        height: 40px;
+        margin-top: 7.5%;
+    }
+    .socialStatCard svg {
+        width: 30px;
+        height: 30px;
+    }
+    .titleAndNumberContainer {
+        margin-right: calc(50% - 81px);
+    }
+    .socialStatNumber {
+        font-size: 220%;
+    }
     #mainDashboardTitle {
         width: unset;
         text-align: center;
@@ -1184,9 +1105,131 @@ input#search-bar:focus:-ms-placeholder {
         width: 60%;
         font-size: 100%;
     }
+    #dashboardSections {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+        -ms-grid-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 6;
+        grid-column-end: 7;
+        padding: 0;
+    }
+    #trafficChartContainer {
+        -ms-grid-row: 1;
+        grid-row-start: 1;
+        -ms-grid-row-span: 1;
+        grid-row-end: 2;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+        margin-top: 20px;
+    }
+    #dailyTrafficChartContainer {
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+        -ms-grid-row-span: 1;
+        grid-row-end: 3;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 2;
+    }
+    #mobileUsersChartContainer {
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+        -ms-grid-row-span: 1;
+        grid-row-end: 3;
+        -ms-grid-column: 2;
+        grid-column-start: 2;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+    #socialStats {
+        -ms-grid-row: 3;
+        grid-row-start: 3;
+        -ms-grid-row-span: 1;
+        grid-row-end: 4;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+    }
+    #newMembers {
+        -ms-grid-row: 4;
+        grid-row-start: 4;
+        -ms-grid-row-span: 1;
+        grid-row-end: 5;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 2;
+    }
+    #recentActivity {
+        -ms-grid-row: 4;
+        grid-row-start: 4;
+        -ms-grid-row-span: 1;
+        grid-row-end: 5;
+        -ms-grid-column: 2;
+        grid-column-start: 2;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+    #messageUser {
+        -ms-grid-row: 5;
+        grid-row-start: 5;
+        -ms-grid-row-span: 1;
+        grid-row-end: 6;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 2;
+    }
+    #settings {
+        -ms-grid-row: 5;
+        grid-row-start: 5;
+        -ms-grid-row-span: 1;
+        grid-row-end: 6;
+        -ms-grid-column: 2;
+        grid-column-start: 2;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+    #onOrOffSettings {
+        width: 100%;
+        padding: 10px 10px 10px 0;
+    }
 }
 
 @media (min-width: 1024px) {
+    .socialStatCard {
+        width: 33%;
+    }
+    #socialStatsCards {
+        width: calc(100% - 20px);
+    }
+    #dashboardSections > div {
+        padding: 10px;
+    }
+    .social-svg-container {
+        width: 40px;
+        height: 40px;
+        margin-top: 7.5%;
+    }
+    .socialStatCard svg {
+        width: 30px;
+        height: 30px;
+    }
+    .titleAndNumberContainer {
+        margin-right: calc(50% - 81px);
+    }
+    .socialStatNumber {
+        font-size: 220%;
+    }
     .alertExit {
         height: unset;
         padding-right: 10;

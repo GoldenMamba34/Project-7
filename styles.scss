@@ -1,4 +1,4 @@
-// mixins and variables
+
 @mixin setWidthAndHeight($width, $height) {
     width: $width;
     height: $width;
@@ -18,7 +18,6 @@ $sideBarWidth: 5vw;
         display: inline-block;
     }
 }
-// body and everything
 
 * {
     font-family: Arial;
@@ -317,7 +316,6 @@ ul li:before {
     content: '-';
     margin-right: 10px;
 }
-// nav
 
 #sideNav {
     display: -webkit-box;
@@ -625,7 +623,7 @@ hr {
     justify-content: space-between;
     padding: 0;
     margin-top: 30px;
-        margin-left: calc(2.5% - 5.5px);
+    margin-left: calc(2.5% - 5.5px);
 }
 
 #saveSettings {
@@ -651,7 +649,6 @@ hr {
     appearance: none;
     background: url("https://png.icons8.com/color/21/3498db/expand-arrow.png") no-repeat 97% center !important;
     padding: 10px;
-
     width: 95%;
     margin-left: calc(2.5% - 5.5px);
 }
@@ -783,89 +780,6 @@ input#search-bar {
     line-height: 21px;
 }
 
-#dashboardSections {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% 50%;
-    grid-template-columns: 50% 50%;
-    -ms-grid-rows: auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 6;
-    grid-column-end: 7;
-    padding: 0;
-}
-
-#trafficChartContainer {
-    -ms-grid-row: 1;
-    grid-row-start: 1;
-    -ms-grid-row-span: 1;
-    grid-row-end: 2;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 2;
-    grid-column-end: 3;
-    margin-top: 20px;
-    // background: orange;
-}
-
-#dailyTrafficChartContainer {
-    -ms-grid-row: 2;
-    grid-row-start: 2;
-    -ms-grid-row-span: 1;
-    grid-row-end: 3;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 1;
-    grid-column-end: 2;
-    // background: yellow;
-}
-
-#mobileUsersChartContainer {
-    -ms-grid-row: 2;
-    grid-row-start: 2;
-    -ms-grid-row-span: 1;
-    grid-row-end: 3;
-    -ms-grid-column: 2;
-    grid-column-start: 2;
-    -ms-grid-column-span: 1;
-    grid-column-end: 3;
-}
-
-#socialStats {
-    -ms-grid-row: 3;
-    grid-row-start: 3;
-    -ms-grid-row-span: 1;
-    grid-row-end: 4;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 2;
-    grid-column-end: 3;
-}
-
-#newMembers {
-    -ms-grid-row: 4;
-    grid-row-start: 4;
-    -ms-grid-row-span: 1;
-    grid-row-end: 5;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 1;
-    grid-column-end: 2;
-}
-
-#recentActivity {
-    -ms-grid-row: 4;
-    grid-row-start: 4;
-    -ms-grid-row-span: 1;
-    grid-row-end: 5;
-    -ms-grid-column: 2;
-    grid-column-start: 2;
-    -ms-grid-column-span: 1;
-    grid-column-end: 3;
-}
-
 .recentActivityIcon {
     @extend .newMemberIcon;
 }
@@ -901,28 +815,6 @@ input#search-bar {
         -ms-transform: scale(1.2) rotate(-90deg);
         transform: scale(1.2) rotate(-90deg);
     }
-}
-
-#messageUser {
-    -ms-grid-row: 5;
-    grid-row-start: 5;
-    -ms-grid-row-span: 1;
-    grid-row-end: 6;
-    -ms-grid-column: 1;
-    grid-column-start: 1;
-    -ms-grid-column-span: 1;
-    grid-column-end: 2;
-}
-
-#settings {
-    -ms-grid-row: 5;
-    grid-row-start: 5;
-    -ms-grid-row-span: 1;
-    grid-row-end: 6;
-    -ms-grid-column: 2;
-    grid-column-start: 2;
-    -ms-grid-column-span: 1;
-    grid-column-end: 3;
 }
 
 .alertExit {
@@ -1162,6 +1054,31 @@ input#search-bar {
         position: relative;
         left: calc(100% - (50% + 90px));
     }
+    .socialStatCard {
+        width:33%;
+    }
+    #socialStatsCards {
+        width: calc(100% - 20px)
+    }
+    #dashboardSections > div {
+        padding:10px;
+    }
+    .social-svg-container {
+        width:40px;
+        height: 40px;
+            margin-top: 7.5%;
+    }
+    .socialStatCard svg {
+        width:30px;
+        height: 30px;
+    }
+    .titleAndNumberContainer {
+        margin-right: calc(50% - 81px);
+    }
+
+    .socialStatNumber {
+        font-size:220%;
+    }
 
     #mainDashboardTitle {
         width: unset;
@@ -1172,9 +1089,7 @@ input#search-bar {
     #dashboardContent {
         grid-column-start: 2;
     }
-    // .alert {
-    //     height: 35px;
-    // }
+
     #sideBar {
         display: block;
     }
@@ -1210,8 +1125,145 @@ input#search-bar {
         width: 60%;
         font-size: 100%;
     }
+
+    #dashboardSections {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+        -ms-grid-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 6;
+        grid-column-end: 7;
+        padding: 0;
+    }
+
+    #trafficChartContainer {
+        -ms-grid-row: 1;
+        grid-row-start: 1;
+        -ms-grid-row-span: 1;
+        grid-row-end: 2;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+        margin-top: 20px;
+    }
+
+    #dailyTrafficChartContainer {
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+        -ms-grid-row-span: 1;
+        grid-row-end: 3;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 2;
+    }
+
+    #mobileUsersChartContainer {
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+        -ms-grid-row-span: 1;
+        grid-row-end: 3;
+        -ms-grid-column: 2;
+        grid-column-start: 2;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+
+    #socialStats {
+        -ms-grid-row: 3;
+        grid-row-start: 3;
+        -ms-grid-row-span: 1;
+        grid-row-end: 4;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+    }
+
+    #newMembers {
+        -ms-grid-row: 4;
+        grid-row-start: 4;
+        -ms-grid-row-span: 1;
+        grid-row-end: 5;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 2;
+    }
+
+    #recentActivity {
+        -ms-grid-row: 4;
+        grid-row-start: 4;
+        -ms-grid-row-span: 1;
+        grid-row-end: 5;
+        -ms-grid-column: 2;
+        grid-column-start: 2;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+
+    #messageUser {
+        -ms-grid-row: 5;
+        grid-row-start: 5;
+        -ms-grid-row-span: 1;
+        grid-row-end: 6;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 2;
+    }
+
+    #settings {
+        -ms-grid-row: 5;
+        grid-row-start: 5;
+        -ms-grid-row-span: 1;
+        grid-row-end: 6;
+        -ms-grid-column: 2;
+        grid-column-start: 2;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+
+    #onOrOffSettings {
+        width: 100%;
+        padding: 10px 10px 10px 0;
+    }
+
+    #sendEmailNotificationsContainer,
+    #setProfileToPublicContainer {}
 }
 @media (min-width:1024px) {
+
+    .socialStatCard {
+        width:33%;
+    }
+    #socialStatsCards {
+        width: calc(100% - 20px) 
+    }
+    #dashboardSections > div {
+        padding:10px;
+    }
+    .social-svg-container {
+        width:40px;
+        height: 40px;
+            margin-top: 7.5%;
+    }
+    .socialStatCard svg {
+        width:30px;
+        height: 30px;
+    }
+    .titleAndNumberContainer {
+        margin-right: calc(50% - 81px);
+    }
+
+    .socialStatNumber {
+        font-size:220%;
+    }
     .alertExit {
         height: unset;
         padding-right: 10;
