@@ -957,7 +957,6 @@ input#search-bar {
     grid-column-start: 1;
     -ms-grid-column-span: 5;
     grid-column-end: 6;
-
 }
 @media (min-width:320px) {
     .search-container {
@@ -975,7 +974,6 @@ input#search-bar {
 
     #dashboardContent {
         grid-column-start: 1;
-
     }
 
     #sideBar {
@@ -1025,15 +1023,128 @@ input#search-bar {
         height: 21px;
         padding-right: 0;
     }
+    @mixin centerElement($width, $padding, $border, $outline) {
+        // width: $width;
+        // margin-left: calc(100% - ($padding + ))
+    }
 
     .alert {
         width: calc(90vw - 30px);
         height: unset;
         overflow: auto;
-        display: inline-block;
-        margin: -50px 5vw 0 5vw;
+        display: block;
+        margin: -50px 5vw 0;
+    }
 
+    #dashboardSections {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+        -ms-grid-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 6;
+        grid-column-end: 7;
+        padding: 0;
+    }
 
+    #trafficChartContainer {
+        -ms-grid-row: 1;
+        grid-row-start: 1;
+        -ms-grid-row-span: 1;
+        grid-row-end: 2;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+        margin-top: 20px;
+    }
+
+    #dailyTrafficChartContainer {
+        -ms-grid-row: 2;
+        grid-row-start: 3;
+        -ms-grid-row-span: 1;
+        grid-row-end: 3;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+
+    #mobileUsersChartContainer {
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+        -ms-grid-row-span: 1;
+        grid-row-end: 3;
+        -ms-grid-column: 2;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+
+    #socialStats {
+        -ms-grid-row: 3;
+        grid-row-start: 4;
+        -ms-grid-row-span: 1;
+        grid-row-end: 5;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+    }
+
+    #newMembers {
+        -ms-grid-row: 4;
+        grid-row-start: 5;
+        -ms-grid-row-span: 1;
+        grid-row-end: 6;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+
+    #recentActivity {
+        -ms-grid-row: 5;
+        grid-row-start: 6;
+        -ms-grid-row-span: 1;
+        grid-row-end: 7;
+        -ms-grid-column: 2;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+
+    #messageUser {
+        -ms-grid-row: 5;
+        grid-row-start: 7;
+        -ms-grid-row-span: 1;
+        grid-row-end: 8;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+
+    #settings {
+        -ms-grid-row: 5;
+        grid-row-start: 8;
+        -ms-grid-row-span: 1;
+        grid-row-end: 9;
+        -ms-grid-column: 2;
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 3;
+    }
+
+#dashboardSections {
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+}
+    #onOrOffSettings {
+        width: 100%;
+        padding: 10px 10px 10px 0;
     }
 }
 @media (min-width:568px) {
@@ -1056,6 +1167,14 @@ input#search-bar {
         padding: 0;
         position: relative;
         left: calc(100% - (50% + 90px));
+    }
+
+    .alert {
+        width: calc(90vw - 30px);
+        height: unset;
+        overflow: unset;
+        display: inline-block;
+        margin: -50px 5vw 0;
     }
 
     .socialStatCard {
@@ -1243,8 +1362,18 @@ input#search-bar {
         padding: 10px 10px 10px 0;
     }
 
-    #sendEmailNotificationsContainer,
-    #setProfileToPublicContainer {}
+    .alert {
+        width: 90%;
+        margin-left: calc(5% - 20px);
+        background-color: #7377BF;
+        color: white;
+        border-radius: 5px;
+        padding: 15px 15px 5px;
+        display: inline-block;
+        height: unset;
+        overflow: auto;
+        font-size: 92%;
+    }
 }
 @media (min-width:1024px) {
     .socialStatCard {
