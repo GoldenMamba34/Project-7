@@ -17,9 +17,7 @@ $sideBarWidth: 5vw;
     @media (min-width:768px) {
         display: inline-block;
     }
-    @media (min-width:768px) {
-        display: inline-block;
-    }
+
 }
 // body and everything
 
@@ -704,7 +702,7 @@ hr {
     display: inline-block;
     padding: 0;
     position: relative;
-    left: calc(40% + 80px);
+    left: calc(100% - (50% + 40px));
 }
 
 input#search-bar {
@@ -1068,6 +1066,14 @@ input#search-bar {
     grid-column-end: 6;
 }
 @media (min-width:320px) {
+    .search-container {
+    display: block;
+    width:90%;
+    position: static;
+
+
+
+}
     #sideBar {
         display: none;
     }
@@ -1123,6 +1129,7 @@ input#search-bar {
     }
 }
 @media (min-width:768px) {
+
     #sideBar {
         display: block;
     }
@@ -1160,6 +1167,10 @@ input#search-bar {
     }
 }
 @media (min-width:1024px) {
+    .alert {
+
+    }
+
     #sideBar {
         display: block;
     }
