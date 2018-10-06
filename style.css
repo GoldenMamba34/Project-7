@@ -1062,14 +1062,13 @@ input#search-bar:focus:-ms-placeholder {
     .search-container {
         display: inline-block;
         width: calc(90% - 75px);
-        margin: 0;
-        margin-left: calc(5% + 10px);
+        margin: 0 0 0 calc(5% + 10px);
         position: static;
     }
     #mainDashboardTitle {
         width: 100%;
         text-align: center;
-        margin: 20px 0px 20px 0px;
+        margin: 20px 0;
     }
     #dashboardContent {
         grid-column-start: 1;
@@ -1109,6 +1108,24 @@ input#search-bar:focus:-ms-placeholder {
         font-size: 90%;
         z-index: 1;
     }
+    .alert p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        display: block;
+        line-height: 1em;
+        /* a */
+        max-height: 2em;
+    }
+    .alertExit {
+        line-height: 0;
+        height: 21px;
+        padding-right: 0;
+    }
+    .alert {
+        width: calc(90% - 30px);
+        height: 40px;
+    }
 }
 
 @media (min-width: 568px) {
@@ -1125,6 +1142,25 @@ input#search-bar:focus:-ms-placeholder {
 }
 
 @media (min-width: 768px) {
+    .search-container {
+        margin: 0;
+        width: 30%;
+        display: inline-block;
+        padding: 0;
+        position: relative;
+        left: calc(100% - (50% + 90px));
+    }
+    #mainDashboardTitle {
+        width: unset;
+        text-align: center;
+        margin: 20px;
+    }
+    #dashboardContent {
+        grid-column-start: 2;
+    }
+    .alert {
+        height: 35px;
+    }
     #sideBar {
         display: block;
     }
@@ -1157,6 +1193,12 @@ input#search-bar:focus:-ms-placeholder {
 }
 
 @media (min-width: 1024px) {
+    .alert {
+        height: 21px;
+    }
+    .search-container {
+        left: calc(100% - (45% + 90px));
+    }
     #sideBar {
         display: block;
     }
