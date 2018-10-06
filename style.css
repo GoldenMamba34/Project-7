@@ -589,7 +589,7 @@ hr {
 }
 
 #settingsButtons {
-    width: 100%;
+    width: 95%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -653,6 +653,7 @@ hr {
     appearance: none;
     background: url("https://png.icons8.com/color/21/3498db/expand-arrow.png") no-repeat 97% center !important;
     padding: 10px;
+    width: 95%;
 }
 
 #timeZoneSelect:focus {
@@ -789,8 +790,8 @@ input#search-bar:focus:-ms-placeholder {
 #dashboardSections {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
     -ms-grid-rows: auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto auto;
     -ms-grid-column: 1;
@@ -1208,7 +1209,7 @@ input#search-bar:focus:-ms-placeholder {
         display: inline-block;
         height: 21px;
         overflow: unset;
-        font-size: 95%;
+        font-size: 92%;
     }
     .search-container {
         left: calc(100% - (45% + 90px));
@@ -1240,6 +1241,12 @@ input#search-bar:focus:-ms-placeholder {
     }
     #notifications {
         width: 40%;
+        font-size: 100%;
+    }
+}
+
+@media (min-width: 1180px) {
+    .alert {
         font-size: 100%;
     }
 }
