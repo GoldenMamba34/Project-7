@@ -80,7 +80,7 @@ input.iosSwitch::before {
     right: auto;
     -webkit-transform: translate(0,0);
     -ms-transform: translate(0,0);
-        transform: translate(0,0);
+    transform: translate(0,0);
     display: block;
     width: 32px;
     height: 32px;
@@ -96,7 +96,7 @@ input.iosSwitch.checked::before,
 input.iosSwitch:checked::before {
     -webkit-transform: translate(20px,0);
     -ms-transform: translate(20px,0);
-        transform: translate(20px,0);
+    transform: translate(20px,0);
 }
 
 input.iosSwitch.red:checked {
@@ -339,7 +339,7 @@ ul li:before {
 #bellIcon:hover {
     -webkit-transform: scale(1.12);
     -ms-transform: scale(1.12);
-        transform: scale(1.12);
+    transform: scale(1.12);
 }
 
 .tinyMargin {
@@ -364,7 +364,7 @@ main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
     width: 100vw;
 }
 
@@ -378,8 +378,8 @@ div {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .newMember {
@@ -388,15 +388,15 @@ div {
     display: flex;
     width: 100%;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .newMemberName {
@@ -417,8 +417,8 @@ div {
     display: inline-flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 50%;
     margin-right: auto;
 }
@@ -444,9 +444,9 @@ div {
 
 #sideBar {
     -ms-grid-row: 3;
-        grid-row-start: 3;
+    grid-row-start: 3;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 1;
     grid-column-end: 2;
     width: $sideBarWidth;
@@ -456,9 +456,9 @@ div {
 
 #header {
     -ms-grid-row: 2;
-        grid-row-start: 2;
+    grid-row-start: 2;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 4;
     grid-column-end: 5;
     height: $headerHeight;
@@ -481,7 +481,7 @@ div {
     margin: 0 0 0 15px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     line-height: $headerHeight;
 }
 @mixin icon {
@@ -494,10 +494,10 @@ div {
     @include icon;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     -webkit-transition-duration: 0.25s;
     -o-transition-duration: 0.25s;
-       transition-duration: 0.25s;
+    transition-duration: 0.25s;
 }
 
 #headerHr {
@@ -523,7 +523,7 @@ hr {
     @include icon;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     @include hideOnBigScreens;
 }
 
@@ -533,7 +533,7 @@ hr {
     margin: 0;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     margin-left: 10px;
     margin-right: 10px;
     @include hideOnBigScreens;
@@ -592,10 +592,10 @@ hr {
 .notificationExitButton:hover {
     -webkit-transform: scale(1.12);
     -ms-transform: scale(1.12);
-        transform: scale(1.12);
+    transform: scale(1.12);
     -webkit-transition-duration: 0.25s;
     -o-transition-duration: 0.25s;
-       transition-duration: 0.25s;
+    transition-duration: 0.25s;
 }
 @mixin settingsButton($backgroundColor) {
     width: calc(50% - 10px);
@@ -607,14 +607,14 @@ hr {
     font-size: 125%;
     -webkit-transition-duration: 225ms;
     -o-transition-duration: 225ms;
-       transition-duration: 225ms;
+    transition-duration: 225ms;
     background: $backgroundColor;
 
     &:hover {
         background: darken($backgroundColor,20);
         -webkit-transform: scale(1.02);
         -ms-transform: scale(1.02);
-            transform: scale(1.02);
+        transform: scale(1.02);
     }
 }
 
@@ -670,18 +670,18 @@ hr {
 
 #dashboardContent {
     -ms-grid-row: 3;
-        grid-row-start: 3;
+    grid-row-start: 3;
     -ms-grid-column: 2;
-        grid-column-start: 2;
+    grid-column-start: 2;
     -ms-grid-column-span: 3;
     grid-column-end: 5;
     background: white;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto auto auto auto auto auto;
-        grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     padding: 0 10px 0 0;
 }
 
@@ -766,11 +766,11 @@ input#search-bar {
     display: inline-block;
     height: 21px;
     -ms-grid-row: 2;
-        grid-row-start: 2;
+    grid-row-start: 2;
     -ms-grid-row-span: 1;
     grid-row-end: 3;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 5;
     grid-column-end: 6;
     margin-top: -50px;
@@ -786,11 +786,11 @@ input#search-bar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto auto auto auto auto auto;
-        grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 6;
     grid-column-end: 7;
     padding: 0;
@@ -798,11 +798,11 @@ input#search-bar {
 
 #trafficChartContainer {
     -ms-grid-row: 1;
-        grid-row-start: 1;
+    grid-row-start: 1;
     -ms-grid-row-span: 1;
     grid-row-end: 2;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 2;
     grid-column-end: 3;
     margin-top: 20px;
@@ -811,11 +811,11 @@ input#search-bar {
 
 #dailyTrafficChartContainer {
     -ms-grid-row: 2;
-        grid-row-start: 2;
+    grid-row-start: 2;
     -ms-grid-row-span: 1;
     grid-row-end: 3;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 1;
     grid-column-end: 2;
     // background: yellow;
@@ -823,47 +823,47 @@ input#search-bar {
 
 #mobileUsersChartContainer {
     -ms-grid-row: 2;
-        grid-row-start: 2;
+    grid-row-start: 2;
     -ms-grid-row-span: 1;
     grid-row-end: 3;
     -ms-grid-column: 2;
-        grid-column-start: 2;
+    grid-column-start: 2;
     -ms-grid-column-span: 1;
     grid-column-end: 3;
 }
 
 #socialStats {
     -ms-grid-row: 3;
-        grid-row-start: 3;
+    grid-row-start: 3;
     -ms-grid-row-span: 1;
     grid-row-end: 4;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 2;
     grid-column-end: 3;
 }
 
 #newMembers {
     -ms-grid-row: 4;
-        grid-row-start: 4;
+    grid-row-start: 4;
     -ms-grid-row-span: 1;
     grid-row-end: 5;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 1;
     grid-column-end: 2;
 }
 
 #recentActivity {
     -ms-grid-row: 4;
-        grid-row-start: 4;
+    grid-row-start: 4;
     -ms-grid-row-span: 1;
     grid-row-end: 5;
     -ms-grid-column: 2;
-        grid-column-start: 2;
+    grid-column-start: 2;
     -ms-grid-column-span: 1;
     grid-column-end: 3;
-    padding-right: 15px;
+
 }
 
 .recentActivityIcon {
@@ -872,7 +872,7 @@ input#search-bar {
 
 .recentActivityInformation {
     @extend .newMemberInformation;
-    width:80%;
+    width: 80%;
 }
 
 .recentActivityActivity {
@@ -881,45 +881,46 @@ input#search-bar {
 
 .recentActivityTimeAgo {
     color: black;
-    margin:5px 0px 0px 0px;
+    margin: 5px 0 0;
 }
 
 .recentActivityNextButton {
+    padding-right: 25px;
     background: none;
     border: none;
     outline: none;
     -webkit-transition-duration: 200ms;
-            -o-transition-duration: 200ms;
-       transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
 
     &:hover {
         -webkit-transform: scale(1.2) rotate(-90deg);
-                -ms-transform: scale(1.2) rotate(-90deg);
-            transform: scale(1.2) rotate(-90deg);
+        -ms-transform: scale(1.2) rotate(-90deg);
+        transform: scale(1.2) rotate(-90deg);
     }
 }
 
 #messageUser {
     -ms-grid-row: 5;
-        grid-row-start: 5;
+    grid-row-start: 5;
     -ms-grid-row-span: 1;
     grid-row-end: 6;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 1;
     grid-column-end: 2;
 }
 
 #settings {
     -ms-grid-row: 5;
-        grid-row-start: 5;
+    grid-row-start: 5;
     -ms-grid-row-span: 1;
     grid-row-end: 6;
     -ms-grid-column: 2;
-        grid-column-start: 2;
+    grid-column-start: 2;
     -ms-grid-column-span: 1;
     grid-column-end: 3;
 }
@@ -932,7 +933,7 @@ input#search-bar {
     border: none;
     -webkit-transition-duration: 0.25s;
     -o-transition-duration: 0.25s;
-       transition-duration: 0.25s;
+    transition-duration: 0.25s;
     line-height: 21px;
     font-size: 18px;
 }
@@ -940,7 +941,7 @@ input#search-bar {
 .alertExit:hover {
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
-        transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 .socialStatCard {
@@ -959,8 +960,8 @@ input#search-bar {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .socialStatCard svg path {
@@ -990,14 +991,14 @@ input#search-bar {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     float: right;
     margin-right: calc(50% - 101px);
     width: 50%;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #socialStatsCards {
@@ -1005,8 +1006,8 @@ input#search-bar {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 #searchForUser {
@@ -1017,7 +1018,7 @@ input#search-bar {
     border-radius: 5px;
     -webkit-transition-duration: 300ms;
     -o-transition-duration: 300ms;
-       transition-duration: 300ms;
+    transition-duration: 300ms;
     background: #FBFBFB;
     color: black;
 
@@ -1058,11 +1059,11 @@ input#search-bar {
 
 #dashboardHeader {
     -ms-grid-row: 1;
-        grid-row-start: 1;
+    grid-row-start: 1;
     -ms-grid-row-span: 1;
     grid-row-end: 2;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     -ms-grid-column-span: 5;
     grid-column-end: 6;
 }

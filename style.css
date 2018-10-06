@@ -883,7 +883,6 @@ input#search-bar:focus:-ms-placeholder {
     grid-column-start: 2;
     -ms-grid-column-span: 1;
     grid-column-end: 3;
-    padding-right: 15px;
 }
 
 .recentActivityInformation {
@@ -892,10 +891,11 @@ input#search-bar:focus:-ms-placeholder {
 
 .recentActivityTimeAgo {
     color: black;
-    margin: 5px 0px 0px 0px;
+    margin: 5px 0 0;
 }
 
 .recentActivityNextButton {
+    padding-right: 25px;
     background: none;
     border: none;
     outline: none;
