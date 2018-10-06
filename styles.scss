@@ -625,6 +625,7 @@ hr {
     justify-content: space-between;
     padding: 0;
     margin-top: 30px;
+        margin-left: calc(2.5% - 5.5px);
 }
 
 #saveSettings {
@@ -650,7 +651,9 @@ hr {
     appearance: none;
     background: url("https://png.icons8.com/color/21/3498db/expand-arrow.png") no-repeat 97% center !important;
     padding: 10px;
-        width: 95%;
+
+    width: 95%;
+    margin-left: calc(2.5% - 5.5px);
 }
 
 #settings label {
@@ -1124,20 +1127,19 @@ input#search-bar {
         z-index: 1;
     }
 
+    .alertExit {
+        line-height: 0;
+        height: 21px;
+        padding-right: 0;
+    }
 
-.alertExit {
-    line-height: 0;
-    height: 21px;
-    padding-right: 0;
-}
-
-.alert {
-    width: calc(90% - 56.5px);
-    height: unset;
-    overflow: auto;
-    padding-bottom: 17px;
-    margin-left: calc(5% + 10px);
-}
+    .alert {
+        width: calc(90% - 56.5px);
+        height: unset;
+        overflow: auto;
+        padding-bottom: 17px;
+        margin-left: calc(5% + 10px);
+    }
 }
 @media (min-width:568px) {
     .sideBarLink {
@@ -1170,11 +1172,9 @@ input#search-bar {
     #dashboardContent {
         grid-column-start: 2;
     }
-
     // .alert {
     //     height: 35px;
     // }
-
     #sideBar {
         display: block;
     }
@@ -1212,12 +1212,9 @@ input#search-bar {
     }
 }
 @media (min-width:1024px) {
-
     .alertExit {
         height: unset;
         padding-right: 10;
-
-
         float: right;
         color: white;
         background: none;
@@ -1231,7 +1228,6 @@ input#search-bar {
     }
 
     .alert {
-
         width: 90%;
         margin-left: calc(5% - 20px);
         background-color: #7377BF;
@@ -1241,9 +1237,8 @@ input#search-bar {
         display: inline-block;
         height: 21px;
         overflow: unset;
-        font-size:92%;
+        font-size: 92%;
     }
-
 
     .search-container {
         left: calc(100% - (45% + 90px));
@@ -1285,9 +1280,8 @@ input#search-bar {
         font-size: 100%;
     }
 }
-
 @media (min-width:1180px) {
     .alert {
-        font-size:100%;
+        font-size: 100%;
     }
 }
