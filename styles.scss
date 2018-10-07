@@ -1060,6 +1060,7 @@ input#search-bar {
         -ms-grid-column-span: 2;
         grid-column-end: 3;
         margin-top: 20px;
+
     }
 
     #dailyTrafficChartContainer {
@@ -1139,12 +1140,16 @@ input#search-bar {
         grid-column-end: 3;
     }
 
-#dashboardSections {
-    grid-template-rows: auto auto auto auto auto auto auto auto;
-}
+    #dashboardSections {
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    }
+
     #onOrOffSettings {
         width: 100%;
         padding: 10px 10px 10px 0;
+    }
+    #trafficChart {
+        height:300px;
     }
 }
 @media (min-width:568px) {

@@ -1121,6 +1121,9 @@ input#search-bar:focus:-ms-placeholder {
         width: 100%;
         padding: 10px 10px 10px 0;
     }
+    #trafficChart {
+        height: 300px;
+    }
 }
 
 @media (min-width: 568px) {

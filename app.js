@@ -89,6 +89,7 @@ chart = new Chart(ctx, {
         }
       ]
     },
+    maintainAspectRatio: true,
     legend: {
       display: false
     }
