@@ -965,6 +965,15 @@ input#search-bar {
         margin: 0 calc(1.5vw + 71px) 0 calc(1.5vw + 33.5px);
         position: static;
     }
+    .socialStatCard {
+width:80%;
+margin:10px 10%;
+    }
+
+    #socialStatsCards {
+            flex-direction: column;
+    }
+
 
     #mainDashboardTitle {
         width: 100vw;
@@ -1165,6 +1174,13 @@ input#search-bar {
     }
 }
 @media (min-width:768px) {
+    #socialStatsCards {
+            flex-direction: unset;
+    }
+
+    .socialStatCard {
+        margin:0px 20px 0px 20px;
+    }
     .search-container {
         margin: 0;
         width: 30%;
